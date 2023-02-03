@@ -1,0 +1,26 @@
+/* .portada {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+ */
+.vh-15 {
+  height: 15vh;
+}
+
+.vh-25 {
+  height: 25vh;
+}
+.vh-50 {
+  height: 50vh;
+}
+.vh-70 {
+  height: 70vh;
+}
+.font-game {
+  font-family: "Press Start 2P", cursive;
+}
+
+.accion {
+  font-family: "Alfa Slab One", cursive;
+}
