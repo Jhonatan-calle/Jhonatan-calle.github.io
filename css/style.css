@@ -4,6 +4,9 @@
   grid-template-rows: repeat(12, 1fr);
 }
  */
+ .vh-10 {
+  height: 10vh;
+}
 .vh-15 {
   height: 15vh;
 }
