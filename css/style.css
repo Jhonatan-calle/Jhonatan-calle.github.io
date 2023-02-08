@@ -7,16 +7,7 @@
  .vh-10 {
   height: 10vh;
 }
-.vh-15 {
-  height: 15vh;
-}
 
-.vh-25 {
-  height: 25vh;
-}
-.vh-50 {
-  height: 50vh;
-}
 .vh-70 {
   height: 70vh;
 }
@@ -26,4 +17,8 @@
 
 .aczcion {
   font-family: "Alfa Slab One", cursive;
+}
+
+.description{
+  font-family: 'Orbitron', sans-serif;
 }
