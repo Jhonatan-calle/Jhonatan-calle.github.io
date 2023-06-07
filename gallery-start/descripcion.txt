@@ -1,0 +1,9 @@
+Es un modelo de galeria de imagenes con vista a todas las diponibles. 
+tiene un boton donde se aplica y se quita un filto a la imagen que se esta visualisando
+
+gracias por leer ❤
+
+It is a model of image gallery with a view to all the available.
+ It has a button where a thread is applied and removed from the image that is being viewed
+ 
+ thanks for reed me ❤

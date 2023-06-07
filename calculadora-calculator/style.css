@@ -1,0 +1,68 @@
+*{
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    position: relative;
+    height: 100vh;
+    background-color: black;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vh;
+    width: 40vw;
+    display: grid;
+    grid-template-rows: 3fr 8fr;
+    border: solid black
+}
+
+.bottons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    border-radius: 1em;
+} 
+
+.bottons > * {
+    border-radius: 1em;
+    margin: 0.3em;
+}
+
+span{
+    font-size: xx-large;
+}
+
+.screen{
+    display: grid;
+    grid-template-rows: 5fr 6fr;
+}
+
+.currenteScreen,
+.presviousScreen{
+   position: relative;
+}
+
+.currentValue,
+.previousValue{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    
+}
+
+.previousValue{
+    font-size: 200%;
+}
+
+.currentValue{
+    font-size: 350%;
+}
+
+button:active{
+    background-color: blue;
+}
