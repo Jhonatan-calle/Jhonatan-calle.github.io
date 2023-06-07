@@ -621,7 +621,7 @@ input[type='checkbox'] {
 /*******************/
 .split .area-1 {
 	height: 430px;
-	background: linear-gradient(to bottom right, rgba(25, 26, 29, 0.5), rgba(25, 26, 29, 0.5)), url('../images/details-background.jpg') center center no-repeat;
+	background: linear-gradient(to bottom right, rgba(25, 26, 29, 0.5), rgba(25, 26, 29, 0.5)), url('../images/details-background.png') center center no-repeat;
 	background-size: cover;
 }
 
@@ -696,7 +696,7 @@ input[type='checkbox'] {
 /*****************/
 .basic-4 {
 	padding-bottom: 1rem;
-	padding-top: 2rem;
+	padding-top: 3rem;
 }
 
 .basic-4 .text-container {
@@ -1278,5 +1278,9 @@ a:hover.back-to-top {
 		margin-left: 2.875rem;
 	}
 	/* end of extra pages */
+
+.radius{
+	border-radius: 10px;
+}
 }
 /* end of min-width 1200px */
