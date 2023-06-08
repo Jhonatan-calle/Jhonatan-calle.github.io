@@ -640,8 +640,9 @@ input[type='checkbox'] {
 
 .split .icons-container img {
 	width: 50px;
-	margin-right: 0.625rem;
-	margin-bottom: 0.75rem;
+	/* margin-right: 0.625rem;
+	margin-bottom: 0.75rem; */
+	margin: 0.7rem;
 }
 
 
@@ -1278,9 +1279,6 @@ a:hover.back-to-top {
 		margin-left: 2.875rem;
 	}
 	/* end of extra pages */
+}
 
-.radius{
-	border-radius: 10px;
-}
-}
 /* end of min-width 1200px */
