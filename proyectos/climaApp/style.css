@@ -1,0 +1,51 @@
+body {
+	display: flex;
+	height: 100vh;
+	background-size: cover;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	font-family: "Open Sans", sans-serif;
+	color: white;
+	background-color: #222;
+}
+
+.car {
+	background-color: #000000d2;
+	padding: 2rem;
+	width: 100%;
+	max-width: 420px;
+	border-radius: 2rem;
+	margin: 1rem;
+}
+
+.input-container {
+	display: flex;
+	justify-content: center;
+}
+
+input.input {
+	border: none;
+	outline: none;
+	padding: 0.4em 1em;
+	border-radius: 24px;
+	background: #7c7c7c2b;
+	color: white;
+	font-family: inherit;
+	font-size: 105%;
+	width: calc(100% - 100px);
+}
+
+button:hover {
+	background: #7c7c7c6b;
+}
+
+button {
+	border-radius: 50%;
+	border: none;
+	margin-left: 1rem;
+}
+
+.clima.carga {
+	visibility: hidden;
+}
