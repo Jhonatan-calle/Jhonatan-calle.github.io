@@ -1,38 +1,249 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+    <!-- Meta información básica -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jhonatan Calle - Desarrollador de software - Licenciado en Ciencias de la Computación">
+    <meta name="author" content="Jhonatan Calle">
+    <meta name="keywords" content="desarrollador, portafolio, Jhonatan Calle, programación, web, computación, ciencias de la computación">
+    <link rel="icon" type="image/png" href="assets/favicon.png"/>
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    <!-- fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <title>Jhonatan Calle - Developer Portfolio</title>
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="portafolio">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>Cargando</title>
-  <link rel="manifest" href="manifest.json">
+    <!-- Vínculos a hojas de estilo externas -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+
+    <!-- Header -->
+    <header>
+        <div class="mobile-header">
+            <button class="icon theme-toggle">
+                <i class="fa-solid fa-moon"></i>
+            </button> 
+            <button id="menuButton" class="icon">
+                <i class="fa-solid fa-bars"></i>
+            </button> 
+            <div id="floatingMenu" class="menu hidden bodyLarge">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="desktop-header">
+            <div class="logo headlineMedium">JhCalle</div>
+            <nav>
+                <ul class="bodyLarge nav-desktop">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="desktop-icon theme-toggle">
+                <i class="fa-solid fa-moon"></i>
+            </button> 
+        </div>
+
+    </header>
+
+    <main>
+        <!-- Sección de inicio -->
+        <section id="inicio">
+
+            <div class="mobile-inicio">
+                <h1 class="displayLarge">HOLA, SOY JHONATAN CALLE</h1>
+                <div>
+                    <p class="headlineLarge">Desarrollador de software</p> <!-- Corregido -->
+                    <p class="headlineMedium">Navega y descubre lo que puedo hacer</p>
+                </div>
+            </div>
+
+            <div class="desktop-inicio">
+                <div class="intro">
+                    <h1 class="displayLarge" >HOLA, SOY JHONATAN CALLE</h1>
+                    <div class="get-in-touch">
+                        <p class="displaySmall">Contactame</p> 
+                        <div class="icons-container">
+                            <a href="https://github.com/Jhonatan-calle" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-github fa-2xl" "></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/jhonatan-calle-galeano/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-linkedin fa-2xl"></i>
+                            </a>
+                        </div>
+                    </div> 
+                </div>
+                
+                <div class="accion-art ">
+                    <p class="displayMedium">Desarrollador de software</p> 
+                    <p class="headlineLarge">Navega y descubre lo que puedo hacer</p>
+                </div>
+                
+            </div>
+            
+        </section>
+
+        <hr>
+
+        <!-- Sección de proyectos -->
+
+        <section id="proyectos">
+            <h2 class="displaySmall">PROYECTOS</h2>
+
+            <div class="mobile-proyects">
+
+                <div class="proyect-container">
+
+                    <a href="proyectos/planEstudio/index.html" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/plan_estudio_portada.png" alt="Portada proyecto Plan de Estudio">
+                    </a>
+                    <h3 class="titleLarge">Plann Estudio</h3>
+                    <p class="bodyLarge">Primera versión del proyecto 'Plan Estudio', actualmente solo funcional para mi carrera en mi universidad. Proyecto en construcción y sujeto a mejoras futuras</p>
+                    
+                </div>
+    
+                <div class="proyect-container">
+                    <a href="proyectos/come-burbujas/index.html" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/come_burbujas_portada.png" alt="Portada proyecto Come Burbujas">
+                    </a>
+                    <h3 class="titleLarge">Come Burbujas</h3>
+                    <p class="bodyLarge">Es un juego donde manejas una burbuja con las teclas WSDA, esta desarrollado en JavaScript con la ayuda de canvas</p> <!-- Corregido -->
+                </div>
+    
+                <div class="proyect-container">
+                    <a href="proyectos/climaApp/index.html" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/clima_portada.png" alt="Portada proyecto Clima">
+                    </a>
+                    <h3 class="titleLarge">Clima</h3>
+                    <p class="bodyLarge">Ingresa el nombre de cualquier ciudad del mundo y recibirás los datos reales del clima en tiempo real</p> <!-- Corregido -->
+                </div>
+
+            </div>
+
+            <div class="desktop-proyects">
+                <div class="desktop-proyect-container">
+                    <a href="proyectos/planEstudio/index.html" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/plan_estudio_portada.png" alt="Portada proyecto Plan de Estudio">
+                    </a>
+                    <div class="proyect-description">
+                        <h3 class="headlineMedium">Plan Estudio</h3>
+                        <p class="titleLarge">Primera versión del proyecto 'Plan Estudio', actualmente solo funcional para mi carrera en mi universidad. Proyecto en construcción y sujeto a mejoras futuras</p>
+                    </div>
+                </div>
+    
+                <div class="desktop-proyect-container">
+                    <a href="proyectos/come-burbujas/index.html" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/come_burbujas_portada.png" alt="Portada proyecto Come Burbujas">
+                    </a>
+                    <div class="proyect-description">
+                        <h3 class="headlineMedium">Come Burbujas</h3>
+                        <p class="titleLarge">Es un juego donde manejas una burbuja con las teclas WSDA, esta desarrollado en JavaScript con la ayuda de canvas</p> 
+                    </div>
+                </div>
+    
+                <div class="desktop-proyect-container">
+                    <a href="proyectos/climaApp/index.html" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/clima_portada.png" alt="Portada proyecto Clima">
+                    </a>
+                    <div class="proyect-description">
+                        <h3 class="headlineMedium">Clima</h3>
+                        <p class="titleLarge">Ingresa el nombre de cualquier ciudad del mundo y recibirás los datos reales del clima en tiempo real</p> 
+                    </div>
+                    
+                </div>
+            </div>
+
+            
+            
+        </section>
+
+        <hr>
+
+        <!-- Sección de habilidades -->
+        <section id="skills">
+
+            <div class="mobile-skills">
+                <h2 class="displayMedium">Skills</h2> 
+                <div class="skills-container">
+                    <img src="assets/html-5.png" alt="HTML logo"/>
+                    <img src="assets/css.png" alt="CSS logo"/>
+                    <img src="assets/javaScript.png" alt="JavaScript logo"/>
+                    <img src="assets/java.png" alt="Java logo"/>
+                    <img src="assets/git.png" alt="Git logo"/>
+                    <img src="assets/gitHub.png" alt="GitHub logo"/> <!-- Corregido -->
+                    <img src="assets/flutter.png" alt="Flutter logo"/>
+                    <img src="assets/react.png" alt="React logo"/>
+                    <img src="assets/sql.png" alt="SQL logo"/>
+                    <img src="assets/mongoDb.png" alt="MongoDb logo"/>
+                    <img src="assets/firebase.png" alt="firebase logo"/>
+                    <img src="assets/api.png" alt="API logo"/>
+                    <img src="assets/dart.png" alt="Dart logo"/>
+                    <img src="assets/linux.png" alt="Linux logo"/>
+                </div>
+            </div>
+
+            <div class="desktop-skills">
+                <div class="title-container">
+                    <h1 class="displayMedium" >Skills</h1>
+                </div>
+                
+                <div class="skills-container">
+                    <img src="assets/html-5.png" alt="HTML logo"/>
+                    <img src="assets/css.png" alt="CSS logo"/>
+                    <img src="assets/javaScript.png" alt="JavaScript logo"/>
+                    <img src="assets/java.png" alt="Java logo"/>
+                    <img src="assets/git.png" alt="Git logo"/>
+                    <img src="assets/gitHub.png" alt="GitHub logo"/>
+                    <img src="assets/flutter.png" alt="Flutter logo"/>
+                    <img src="assets/react.png" alt="React logo"/>
+                    <img src="assets/sql.png" alt="SQL logo"/>
+                    <img src="assets/mongoDb.png" alt="MongoDb logo"/>
+                    <img src="assets/firebase.png" alt="firebase logo"/>
+                    <img src="assets/api.png" alt="API logo"/>
+                    <img src="assets/dart.png" alt="Dart logo"/>
+                    <img src="assets/linux.png" alt="Linux logo"/>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <hr>
+    <!-- Pie de página -->
+    <footer id="contacto">
+        <p class="titleLarge">¡Hay más proyectos en mi GitHub!</p> <!-- Corregido -->
+        <p class="bodyLarge">Explora más proyectos y actividad reciente en mi perfil de GitHub</p> <!-- Corregido -->
+        <p class="bodyLarge">Río Cuarto, Córdoba, Argentina</p>
+
+        <div class="icons-container">
+            <a href="https://github.com/Jhonatan-calle" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github fa-2xl" "></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jhonatan-calle-galeano/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin fa-2xl"></i>
+            </a>
+        </div>
+
+        <p class="bodyMedium">jhonatancallegaleano@gmail.com</p>
+    </footer>
+
+    <!-- Archivos JavaScript -->
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/150bbdffcc.js" crossorigin="anonymous"></script>
+
 </body>
+
 </html>

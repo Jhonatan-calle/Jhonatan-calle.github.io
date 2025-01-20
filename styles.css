@@ -1,0 +1,408 @@
+/* logica de estilos */
+
+@media (max-width: 800px) {
+    /* Para dispositivos móviles */
+    .desktop-header , .desktop-proyects, .desktop-inicio, .desktop-skills {
+        display: none;
+    }
+    
+    .mobile-header, .mobile-inicio, .mobile-proyects, .mobile-skills{
+        display: flex;
+    }
+}
+
+@media (min-width: 800px) {
+    /* Para dispositivos más grandes (escritorio) */
+    .desktop-header , .desktop-proyects, .desktop-inicio, .desktop-skills {
+        display: flex;
+    }
+    
+    .mobile-header, .mobile-inicio, .mobile-proyects, .mobile-skills{
+        display: none;
+    }
+}
+/* colores */
+
+
+/* Tema claro por defecto */
+:root {             
+    --background-color: #e4ebf0;
+    --background-color2: #bdd1de;
+    --reverse-background: #000000;
+    --text-color: #000000;
+    --img: url("assets/background-white.png")
+}
+  
+/* Tema oscuro */
+[data-theme="dark"] {
+    --background-color: #000000;
+    --background-color2: #202020;
+    --reverse-background: #fff;
+    --text-color: #ffff;
+    --img: url("assets/background.png")
+}
+
+
+/* fuetes */
+
+.displayLarge-desktop {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    font-size: 4rem;
+}
+
+.displayLarge {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    font-size: 3rem;
+}
+
+.displayMedium{
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    font-style: normal;
+    line-height: 1.5;
+    font-size: 2.5rem;
+}
+
+.displaySmall {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    font-style: normal;
+    line-height: 1.5;
+    font-size: 2rem;
+}
+
+
+.headlineLarge {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    font-size: 1.7rem;
+}
+  
+.headlineMedium {
+    font-family: "Montserrat", serif;
+    font-weight: 350;
+    letter-spacing: -0.5px;
+    font-style: normal;
+    line-height: 1.5;
+    font-size: 1.45rem;
+}
+
+
+.titleLarge {
+    font-family: "Montserrat", serif;
+    font-weight: 350;
+    letter-spacing: -0.5px;
+    font-style: normal;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.bodyLarge {
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.bodyMedium {
+    font-family: "Montserrat", serif;
+    font-weight: 350;
+    font-style: normal;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+
+
+
+  
+/* estilos a etiquetas */
+html {
+    font-size: 16px; /* 1rem = 16px */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color); 
+    color: var(--text-color);
+}
+
+header {
+    margin: 0;
+    top: 0;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--background-color);
+}
+
+hr {
+    border: none; 
+    border-top: 1px solid gray; 
+    margin: 10px 0; 
+}
+
+i{
+    background-color:var(--background-color);
+    color: var(--reverse-background)
+}
+
+a {
+    color: inherit; 
+    text-decoration: none; 
+    margin-left: 0.25rem;
+}
+  
+  
+a:hover i {
+    color: #0077b5; /
+}
+
+/* estilos a secciones */
+
+#inicio {
+    height: 80vh;
+    margin-top: 60px;
+}
+
+#proyectos {
+    padding: 0px 15px;
+}
+
+#proyectos > h2 {
+    margin-bottom: 50px;
+}
+
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contacto>p {
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+    gap: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.icons-container {
+    margin: 1rem;
+    align-content: center;
+}
+
+
+.icon {
+    font-size: 1.5rem;
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+
+/* Estilos para móviles */
+
+.mobile-header {
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 25px 0px 25px;
+}
+
+.mobile-inicio {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    padding: 15px;
+}
+
+.mobile-proyects {
+    flex-direction: column;
+}
+
+.mobile-proyects > .proyect-container {
+    margin-bottom: 30px;
+}
+
+.mobile-skills {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    position: absolute;
+    /* background-color: white; */
+    /* border: 1px solid #ccc; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    text-align: center;
+    background-color: var(--background-color2);
+    padding: 0.5rem 0;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #f0f0f0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* estilos para computadoras */
+
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul {
+    display: inline-flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-header {
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem 1rem 0.5rem 1rem;
+}
+
+.desktop-icon {
+    font-size: 1.5rem;
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    cursor: pointer;
+}
+
+.desktop-inicio {
+    height: 100%;
+    padding: 0;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.get-in-touch {
+    display: flex;
+}
+
+.accion-art {
+    background-image: var(--img);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.accion-art > p {
+    text-align: center;
+    color: #fff;
+    padding: 0 1rem;
+}
+
+.desktop-proyects {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.desktop-proyect-container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+
+.desktop-proyect-container a {
+    flex: 2;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.proyect-description {
+    flex: 3; /* La descripción ocupa 3 partes del espacio */
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos internos (h3, p) se apilen verticalmente */
+    justify-content: center; /* Centra verticalmente el contenido */
+}
+
+.proyect-description h3 {
+    margin: 0; /* Elimina el margen superior/inferior */
+    
+}
+
+.proyect-description p {
+    margin: 5px 0 0; /* Añade un pequeño espacio encima del párrafo */
+}
+
+.title-container {
+    display: flex; 
+    flex: 1; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.desktop-skills .skills-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
