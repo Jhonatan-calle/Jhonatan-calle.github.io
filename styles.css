@@ -9,6 +9,12 @@
     .mobile-header, .mobile-inicio, .mobile-proyects, .mobile-skills{
         display: flex;
     }
+
+    #referencias {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
 }
 
 @media (min-width: 800px) {
@@ -19,6 +25,12 @@
     
     .mobile-header, .mobile-inicio, .mobile-proyects, .mobile-skills{
         display: none;
+    }
+
+    #referencias {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
 }
 /* colores */
@@ -195,6 +207,10 @@ a:hover i {
 #contacto>p {
     text-align: center;
     margin: 0.5rem 0;
+}
+
+#referencias {
+    margin: 0 1em;
 }
 
 .skills-container {
@@ -405,4 +421,66 @@ nav ul {
     justify-content: center;
     gap: 2rem;
     padding: 2rem;
+}
+
+
+
+
+
+
+
+.list-component {
+    border-left: 1px solid gray;
+    list-style: none;
+    margin-left: 10px;
+    padding-top: 20px
+}
+/* https://www.computerhope.com/issues/ch001705.htm */
+.list-component .__item {
+    background: url(https://www.computerhope.com/issues/pictures/bullet.gif) no-repeat top left;
+    background-position: top left;
+    padding: 0 0 4px 60px;
+    margin-left: 1em;
+    position: relative;
+    right: 67px;
+    margin-bottom: 10px;
+    top: 10px;
+}
+
+.card-component {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 1em;
+    max-width: 450px;
+    font-family: Arial;
+    position: relative;
+    bottom: 20px;
+    width: 100%;
+}
+
+.card-component .__year {}
+
+.card-component .__title {
+font-size: 1em;
+}
+
+.__subtitle {
+    font-size: 0.8em;
+}
+.card-component .__text {
+color: gray;
+}
+
+.tags>span {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.tags{
+    margin: 1em;
 }
