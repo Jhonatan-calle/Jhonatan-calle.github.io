@@ -227,6 +227,10 @@ img {
     border-radius: 20px;
 }
 
+.tecStack {
+	font-style: italic;
+}
+
 .icons-container {
     margin: 1rem;
     align-content: center;
@@ -403,7 +407,7 @@ nav ul {
 }
 
 .proyect-description p {
-    margin: 5px 0 0; /* Añade un pequeño espacio encima del párrafo */
+    margin: 5px  0; /* Añade un pequeño espacio encima del párrafo */
 }
 
 .title-container {
