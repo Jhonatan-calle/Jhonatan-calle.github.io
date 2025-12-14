@@ -9,6 +9,10 @@
         display: flex;
     }
 
+    .desktop-inicio::before {
+        display: none;
+    }
+
     #referencias {
         display: flex;
         flex-direction: column;
@@ -19,6 +23,10 @@
 @media (min-width: 800px) {
     /* Para dispositivos más grandes (escritorio) */
     .desktop-header , .desktop-proyects, .desktop-inicio, .desktop-skills {
+        display: flex;
+    }
+
+    .desktop-inicio::before {
         display: flex;
     }
     
@@ -41,7 +49,7 @@
     --background-color2: #bdd1de;
     --reverse-background: #000000;
     --text-color: #000000;
-    --img: url("assets/background-white.png")
+    --img: url("assets/undraw_random-thoughts_spw5.svg")
 }
   
 /* Tema oscuro */
@@ -50,7 +58,6 @@
     --background-color2: #202020;
     --reverse-background: #fff;
     --text-color: #ffff;
-    --img: url("assets/background.png")
 }
 
 
@@ -340,25 +347,60 @@ nav ul {
     cursor: pointer;
 }
 
+
+.desktop-inicio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: var(--img);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+
+    opacity: 0.8; /* ajustá acá */
+    pointer-events: none;
+}
+
 .desktop-inicio {
+    position: relative;
     height: 100%;
     padding: 0;
+    overflow: hidden;
+
+    align-items: flex-end;     /* ↓ abajo */
+    justify-content: flex-start; /* ← izquierda */
 }
+
+.desktop-inicio > * {
+    position: relative;
+    z-index: 1;
+}
+
 
 .intro {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 2rem;
-    width: 100%;
+    gap: 0.5rem;
+    flex: 2;
+
+    padding: 2rem 2.5rem; /* margen visual desde el borde */
+    max-width: 60%;       /* opcional: evita que se estire demasiado */
 }
+
+.intro h1{
+  margin-bottom: 2rem;
+}
+.intro p {
+    margin: 0;
+}
+
 
 .get-in-touch {
     display: flex;
 }
 
 .accion-art {
-    background-image: var(--img);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -366,11 +408,11 @@ nav ul {
     display: flex;
     flex-direction: column;
     width: 100%;
+    flex: 1;
 }
 
 .accion-art > p {
     text-align: center;
-    color: #fff;
     padding: 0 1rem;
 }
 
