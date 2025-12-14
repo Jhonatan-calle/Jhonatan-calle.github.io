@@ -197,13 +197,12 @@ a:hover i {
 
     display: flex;
 }
-}
 
 #proyectos {
     padding: 0px 15px;
 }
 
-#proyectos > h2 {
+.proyectos-header {
     margin-bottom: 50px;
 }
 
