@@ -192,8 +192,11 @@ a:hover i {
 /* estilos a secciones */
 
 #inicio {
-    min-height: 80vh;
+    height: calc(90vh - 60px);
     margin-top: 60px;
+
+    display: flex;
+}
 }
 
 #proyectos {
@@ -263,11 +266,36 @@ img {
 }
 
 .mobile-inicio {
+    position: relative;  
     flex-direction: column;
-    justify-content: space-around;
     height: 100%;
+    width: 100%;
     padding: 15px;
 }
+
+.mobile-inicio > div {
+    margin-top: auto;
+}
+
+.mobile-inicio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("assets/undraw_deep-work_muov.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 50%;
+
+    opacity: 0.8; /* ajustá acá */
+    pointer-events: none;
+}
+
+.mobile-inicio > * {
+    position: relative;
+    z-index: 1;
+}
+
 
 .mobile-proyects {
     flex-direction: column;
@@ -365,6 +393,7 @@ nav ul {
 .desktop-inicio {
     position: relative;
     height: 100%;
+    width: 100%;
     padding: 0;
     overflow: hidden;
 
