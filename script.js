@@ -50,6 +50,10 @@ const menuItems = document.querySelectorAll('#floatingMenu a');
 
 menuItems.forEach(item => {
   item.addEventListener('click', (event) => {
+
+    if (!href.startsWith('#')) {
+      return;
+    }
     // Evita que se recargue la página
     event.preventDefault();
     
