@@ -129,8 +129,8 @@
     font-family: "Montserrat", serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 0.9rem;
     line-height: 1.5;
+    font-size: 0.9rem;
 }
 
 .bodyMedium {
@@ -200,6 +200,13 @@ a:hover i {
 
 #proyectos {
     padding: 0px 15px;
+}
+
+#langToggle {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;   /* centra verticalmente */
+    height: 100%;
 }
 
 .proyectos-header {

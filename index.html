@@ -1,358 +1,472 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <!-- Basic meta information -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Software developer with experience in building functional projects, both personal and professional, several of which are in production and actively used. Bachelor in Computer Science."
+    />
+    <meta name="author" content="Jhonatan Calle" />
+    <meta
+      name="keywords"
+      content="developer, portfolio, Jhonatan Calle, programming, web, computing, computer science"
+    />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
 
-<head>
-    <!-- Meta información básica -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Desarrollador de software con experiencia en la creación de proyectos funcionales, tanto personales como profesionales, varios de los cuales están en producción y operativos. Licenciado en Ciencias de la Computación">
-    <meta name="author" content="Jhonatan Calle">
-    <meta name="keywords" content="desarrollador, portafolio, Jhonatan Calle, programación, web, computación, ciencias de la computación">
-    <link rel="icon" type="image/png" href="assets/favicon.png"/>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
     <title>Jhonatan Calle - Developer Portfolio</title>
 
-    <!-- Vínculos a hojas de estilo externas -->
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <meta name="google-site-verification" content="BM0rMNGOqbhP2lxD4-S2dfLeo9gKVbItG49JPANhAtk" />
-</head>
-<body>
+    <!-- External stylesheets -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="google-site-verification"
+      content="BM0rMNGOqbhP2lxD4-S2dfLeo9gKVbItG49JPANhAtk"
+    />
+  </head>
 
+  <body>
     <!-- Header -->
     <header>
-        <div class="mobile-header">
-            <button class="icon theme-toggle">
-                <i class="fa-solid fa-moon"></i>
-            </button> 
-            <button id="menuButton" class="icon">
-                <i class="fa-solid fa-bars"></i>
-            </button> 
-            <div id="floatingMenu" class="menu hidden bodyLarge">
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#referencias">Experiencia</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
+      <div class="mobile-header">
+        <button class="icon theme-toggle">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="menuButton" class="icon">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div id="floatingMenu" class="menu hidden bodyLarge">
+          <ul>
+            <li><a href="#inicio">Home</a></li>
+            <li><a href="#proyectos">Projects</a></li>
+            <li><a href="#referencias">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contacto">Contact</a></li>
+            <li><a href="index_es.html">Language: EN</a></li>
+          </ul>
         </div>
-        
-        <div class="desktop-header">
-            <div class="logo headlineMedium">JhCalle</div>
-            <nav>
-                <ul class="bodyLarge nav-desktop">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#referencias">Experiencia</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-            <button class="desktop-icon theme-toggle">
-                <i class="fa-solid fa-moon"></i>
-            </button> 
-        </div>
+      </div>
 
+      <div class="desktop-header">
+        <div class="logo headlineMedium">JhCalle</div>
+        <nav> <ul class="bodyLarge nav-desktop">
+            <li><a href="#inicio">Home</a></li>
+            <li><a href="#proyectos">Projects</a></li>
+            <li><a href="#referencias">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contacto">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="bodyLarge" id="langToggle">
+          <a href="index_es.html">Language: EN</a>
+        </div>
+        <button class="desktop-icon theme-toggle">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
     </header>
 
     <main>
-        <!-- Sección de inicio -->
-        <section id="inicio">
-
-            <div class="mobile-inicio">
-                <h1 class="displayLarge">HOLA, SOY JHONATAN CALLE</h1>
-                <div>
-                    <p class="headlineLarge">Desarrollador de software</p> <!-- Corregido -->
-                    <p class="headlineLarge">Licenciatura en cs de la computación</p> 
-                </div>
-            </div>
-
-            <div class="desktop-inicio">
-                <div class="intro">
-                    <h1 class="displayLarge" >HOLA, SOY JHONATAN CALLE</h1>
-                    <div>
-                      <p class="displayMedium">Desarrollador de software</p> 
-                      <p class="displayMedium">Licenciatura en cs de la computación</p> 
-                    </div>
-                    <div class="get-in-touch">
-                        <p class="displaySmall">Contactame</p> 
-                        <div class="icons-container">
-                            <a href="https://github.com/Jhonatan-calle" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-github fa-2xl" "></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/jhonatan-calle-galeano/" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-brands fa-linkedin fa-2xl"></i>
-                            </a>
-                        </div>
-                    </div> 
-                </div>
-                
-                <div class="accion-art ">
-                </div>
-                
-            </div>
-            
-        </section>
-
-        <hr>
-
-        
-
-
-        <section id="proyectos">
-        <!-- Sección de proyectos -->
-            <div class="proyectos-header">
-              <h2 class="displaySmall">PROYECTOS</h2>
-              <h3 class="headlineMedium">Haz clic en las imágenes para ir al enlace de cada proyecto</h3>
-            </div>
-
-            <div class="mobile-proyects">
-
-                <div class="proyect-container">
-
-                    <a href="https://github.com/ddalio/proyecto-alberdi-unrc-2025" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/club-alberdi_portada.png" alt="Portada proyecto club Deportivo">
-                    </a>
-                    <h3 class="titleLarge">Plataforma Club Deportivo</h3>
-                    <p class="bodyLarge">aplicación web de administración y consulta de datos. Estos datos son las reservas que desean administrar el Club Alberdi de la Ciudad de Río Cuarto. </p>
-                    <p class="tecStack bodyMedium">Python, flask, SQLite, Docker</p>
-                </div>
-
-                <div class="proyect-container">
-
-                    <a href="https://github.com/AlieniAgustin/obvio-wallet" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/obvio_portada.png" alt="Portada proyecto Obvio wallet">
-                    </a>
-                    <h3 class="titleLarge">Obvio Wallet</h3>
-                    <p class="bodyLarge">Obvio Wallet es una billetera digital desarrollada incluyendo funcionalidades básicas de gestión financiera y está orientado al modelado y diseño de sistemas de software. </p>
-                    <p class="tecStack bodyMedium">Ruby, SQLite, Sinatra, Docker, HTML, CSS</p>
-                </div>
-
-                <div class="proyect-container">
-
-                    <a href="proyectos/planEstudio/index.html" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/plan_estudio_portada.png" alt="Portada proyecto Plan de Estudio">
-                    </a>
-                    <h3 class="titleLarge">Plan Estudio</h3>
-                    <p class="bodyLarge">Primera versión del proyecto 'Plan Estudio', actualmente solo funcional para mi carrera en mi universidad. Proyecto en construcción y sujeto a mejoras futuras</p>
-                    <p class="tecStack bodyMedium">Flutter, Dart, Firebase</p>
-                    
-                </div>
-    
-                <div class="proyect-container">
-                    <a href="proyectos/come-burbujas/index.html" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/come_burbujas_portada.png" alt="Portada proyecto Come Burbujas">
-                    </a>
-                    <h3 class="titleLarge">Come Burbujas</h3>
-                    <p class="bodyLarge">Es un juego donde manejas una burbuja con las teclas WSDA, esta desarrollado en JavaScript con la ayuda de canvas</p> <!-- Corregido -->
-                    <p class="tecStack bodyMedium">JavaScript, HTML, CSS</p>
-                </div>
-    
-                <div class="proyect-container">
-                    <a href="proyectos/climaApp/index.html" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/clima_portada.png" alt="Portada proyecto Clima">
-                    </a>
-                    <h3 class="titleLarge">Clima</h3>
-                    <p class="bodyLarge">Ingresa el nombre de cualquier ciudad del mundo y recibirás los datos reales del clima en tiempo real</p> <!-- Corregido -->
-                    <p class="tecStack bodyMedium">API, JavaScript, HTML, CSS</p>
-                </div>
-
-            </div>
-
-            <div class="desktop-proyects">
-
-                <div class="desktop-proyect-container">
-                    <a href="https://github.com/ddalio/proyecto-alberdi-unrc-2025" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/club-alberdi_portada.png" alt="Portada proyecto club Deportivo">
-                    </a>
-                    <div class="proyect-description">
-                        <h3 class="headlineMedium">Plataforma Club Deportivo</h3>
-                        <p class="titleLarge">aplicación web de administración y consulta de datos. Estos datos son las reservas que desean administrar el Club Alberdi de la Ciudad de Río Cuarto. </p>
-                        <p class="tecStack titleLarge">Python, flask, SQLite, Docker</p>
-                    </div>
-                </div>
-
-                <div class="desktop-proyect-container">
-                    <a href="https://github.com/AlieniAgustin/obvio-wallet" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/obvio_portada.png" alt="Portada proyecto Obvio wallet">
-                    </a>
-                    <div class="proyect-description">
-                        <h3 class="headlineMedium">Obvio Wallet</h3>
-                        <p class="titleLarge">Obvio Wallet es una billetera digital desarrollada incluyendo funcionalidades básicas de gestión financiera y está orientado al modelado y diseño de sistemas de software. </p>
-                        <p class="tecStack titleLarge">Ruby, SQLite, Sinatra, Docker, HTML, CSS</p>
-                    </div>
-                </div>
-
-                <div class="desktop-proyect-container">
-                    <a href="proyectos/planEstudio/index.html" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/plan_estudio_portada.png" alt="Portada proyecto Plan de Estudio">
-                    </a>
-                    <div class="proyect-description">
-                        <h3 class="headlineMedium">Plan Estudio</h3>
-                        <p class="titleLarge">Primera versión del proyecto 'Plan Estudio', actualmente solo funcional para mi carrera en mi universidad. Proyecto en construcción y sujeto a mejoras futuras</p>
-                        <p class="tecStack titleLarge">Flutter, Dart, Firebase</p>
-                    </div>
-                </div>
-    
-                <div class="desktop-proyect-container">
-                    <a href="proyectos/come-burbujas/index.html" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/come_burbujas_portada.png" alt="Portada proyecto Come Burbujas">
-                    </a>
-                    <div class="proyect-description">
-                        <h3 class="headlineMedium">Come Burbujas</h3>
-                        <p class="titleLarge">Es un juego donde manejas una burbuja con las teclas WSDA, esta desarrollado en JavaScript con la ayuda de canvas</p> 
-                        <p class="tecStack titleLarge">JavaScript, HTML, CSS</p>
-                    </div>
-                </div>
-    
-                <div class="desktop-proyect-container">
-                    <a href="proyectos/climaApp/index.html" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/clima_portada.png" alt="Portada proyecto Clima">
-                    </a>
-                    <div class="proyect-description">
-                        <h3 class="headlineMedium">Clima</h3>
-                        <p class="titleLarge">Ingresa el nombre de cualquier ciudad del mundo y recibirás los datos reales del clima en tiempo real</p> 
-                        <p class="tecStack titleLarge">API, JavaScript, HTML, CSS</p>
-                    </div>
-                    
-                </div>
-            </div>
-
-            
-            
-        </section>
-
-        <hr>
-
-        <section id="referencias">
-            <div>
-                <h2 class="displaySmall">Experiencia</h2>
-                <ul class="list-component">
-                    <li class="__item">
-                        <div class="card-component">
-                            <h2 class="__year">junio 2024 - presente</h2>
-                            <h1 class="__title">Plataforma plan de estudios universitarios</h1>
-                            <div class="tags">
-                                <span>Flutter</span>
-                                <span>Dart</span>
-                                <span>Firebase</span>
-                            </div>
-                            <a href="proyectos/planEstudio/index.html" target="_blank" rel="noopener noreferrer">Link</a>
-                        </div>
-                    </li>
-                    <li class="__item">
-                        <div class="card-component">
-                            <h2 class="__year">enero 2024 - septiembre 2024</h2>
-                            <h1 class="__title">Aplicación móvil para gestión de préstamos y clientes
-                            </h1>
-                            <div class="tags">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>MongoDB</span>
-                                <span>Expo</span>
-                            </div>
-                            <p class="__text">La version disponible para visualizar esta desactualizada y no es la que se esta utilizando actualmente</p>
-                            <a href="https://github.com/Jhonatan-calle/Aplicacion-mobil-React-Contador" target="_blank" rel="noopener noreferrer">Link</a>
-                        </div>
-                    </li>
-              </ul>
-            </div>
-            <div>
-                <h2 class="displaySmall">Educación</h2>
-                <ul class="list-component">
-                    <li class="__item">
-                        <div class="card-component">
-                            <h2 class="__year">2021 - presente</h2>
-                            <h1 class="__title">Licenciatura en ciencias de la computación</h1>
-                            <h3  class="__subtitle">Universidad Nacional de Río Cuárto</h3>
-                            <p class="__text">Actualmente (año 2025) estoy cursando materias de tercero y cuarto año de la carrera </p>
-                        </div>
-                    </li>
-              </ul>
-            </div>
-        </section>
-
-        <hr>
-
-        <!-- Sección de habilidades -->
-        <section id="skills">
-
-            <div class="mobile-skills">
-                <h2 class="displayMedium">Skills</h2> 
-                <div class="skills-container">
-                    <img src="assets/html-5.png" alt="HTML logo"/>
-                    <img src="assets/css.png" alt="CSS logo"/>
-                    <img src="assets/javaScript.png" alt="JavaScript logo"/>
-                    <img src="assets/java.png" alt="Java logo"/>
-                    <img src="assets/git.png" alt="Git logo"/>
-                    <img src="assets/gitHub.png" alt="GitHub logo"/> <!-- Corregido -->
-                    <img src="assets/flutter.png" alt="Flutter logo"/>
-                    <img src="assets/react.png" alt="React logo"/>
-                    <img src="assets/sql.png" alt="SQL logo"/>
-                    <img src="assets/mongoDb.png" alt="MongoDb logo"/>
-                    <img src="assets/firebase.png" alt="firebase logo"/>
-                    <img src="assets/api.png" alt="API logo"/>
-                    <img src="assets/dart.png" alt="Dart logo"/>
-                    <img src="assets/linux.png" alt="Linux logo"/>
-                </div>
-            </div>
-
-            <div class="desktop-skills">
-                <div class="title-container">
-                    <h1 class="displayMedium" >Skills</h1>
-                </div>
-                
-                <div class="skills-container">
-                    <img src="assets/html-5.png" alt="HTML logo"/>
-                    <img src="assets/css.png" alt="CSS logo"/>
-                    <img src="assets/javaScript.png" alt="JavaScript logo"/>
-                    <img src="assets/java.png" alt="Java logo"/>
-                    <img src="assets/git.png" alt="Git logo"/>
-                    <img src="assets/gitHub.png" alt="GitHub logo"/>
-                    <img src="assets/flutter.png" alt="Flutter logo"/>
-                    <img src="assets/react.png" alt="React logo"/>
-                    <img src="assets/sql.png" alt="SQL logo"/>
-                    <img src="assets/mongoDb.png" alt="MongoDb logo"/>
-                    <img src="assets/firebase.png" alt="firebase logo"/>
-                    <img src="assets/api.png" alt="API logo"/>
-                    <img src="assets/dart.png" alt="Dart logo"/>
-                    <img src="assets/linux.png" alt="Linux logo"/>
-                </div>
-            </div>
-            
-        </section>
-    </main>
-
-    <hr>
-    <!-- Pie de página -->
-    <footer id="contacto">
-        <p class="titleLarge">¡Hay más proyectos en mi GitHub!</p> <!-- Corregido -->
-        <p class="bodyLarge">Explora más proyectos y actividad reciente en mi perfil de GitHub</p> <!-- Corregido -->
-        <p class="bodyLarge">Río Cuarto, Córdoba, Argentina</p>
-
-        <div class="icons-container">
-            <a href="https://github.com/Jhonatan-calle" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-github fa-2xl" "></i>
-            </a>
-            <a href="https://www.linkedin.com/in/jhonatan-calle-galeano/" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-linkedin fa-2xl"></i>
-            </a>
+      <!-- Home section -->
+      <section id="inicio">
+        <div class="mobile-inicio">
+          <h1 class="displayLarge">HELLO, I'M JHONATAN CALLE</h1>
+          <div>
+            <p class="headlineLarge">Software Developer</p>
+            <p class="headlineLarge">Bachelor's Degree in Computer Science</p>
+          </div>
         </div>
 
-        <p class="bodyMedium">jhonatancallegaleano@gmail.com</p>
+        <div class="desktop-inicio">
+          <div class="intro">
+            <h1 class="displayLarge">HELLO, I'M JHONATAN CALLE</h1>
+            <div>
+              <p class="displayMedium">Software Developer</p>
+              <p class="displayMedium">Bachelor's Degree in Computer Science</p>
+            </div>
+            <div class="get-in-touch">
+              <p class="displaySmall">Get in touch</p>
+              <div class="icons-container">
+                <a
+                  href="https://github.com/Jhonatan-calle"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-github fa-2xl"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/jhonatan-calle-galeano/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-linkedin fa-2xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="accion-art"></div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Projects section -->
+      <section id="proyectos">
+        <div class="proyectos-header">
+          <h2 class="displaySmall">PROJECTS</h2>
+          <h3 class="headlineMedium">
+            Click on the images to visit each project
+          </h3>
+        </div>
+
+        <div class="mobile-proyects">
+          <div class="proyect-container">
+            <a
+              href="https://github.com/ddalio/proyecto-alberdi-unrc-2025"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/club-alberdi_portada.png"
+                alt="Sports Club Platform cover"
+              />
+            </a>
+            <h3 class="titleLarge">Sports Club Platform</h3>
+            <p class="bodyLarge">
+              Web application for data management and consultation. The data
+              corresponds to reservations managed by Club Alberdi from Río
+              Cuarto city.
+            </p>
+            <p class="tecStack bodyMedium">Python, Flask, SQLite, Docker</p>
+          </div>
+
+          <div class="proyect-container">
+            <a
+              href="https://github.com/AlieniAgustin/obvio-wallet"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="assets/obvio_portada.png" alt="Obvio Wallet cover" />
+            </a>
+            <h3 class="titleLarge">Obvio Wallet</h3>
+            <p class="bodyLarge">
+              Obvio Wallet is a digital wallet developed with basic financial
+              management features, focused on software system modeling and
+              design.
+            </p>
+            <p class="tecStack bodyMedium">
+              Ruby, SQLite, Sinatra, Docker, HTML, CSS
+            </p>
+          </div>
+
+          <div class="proyect-container">
+            <a
+              href="proyectos/planEstudio/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/plan_estudio_portada.png"
+                alt="Study Plan project cover"
+              />
+            </a>
+            <h3 class="titleLarge">Study Plan</h3>
+            <p class="bodyLarge">
+              First version of the "Study Plan" project, currently functional
+              only for my degree program. Project under development and subject
+              to future improvements.
+            </p>
+            <p class="tecStack bodyMedium">Flutter, Dart, Firebase</p>
+          </div>
+
+          <div class="proyect-container">
+            <a
+              href="proyectos/come-burbujas/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/come_burbujas_portada.png"
+                alt="Bubble Eater game cover"
+              />
+            </a>
+            <h3 class="titleLarge">Bubble Eater</h3>
+            <p class="bodyLarge">
+              A game where you control a bubble using the WASD keys. Developed
+              in JavaScript using canvas.
+            </p>
+            <p class="tecStack bodyMedium">JavaScript, HTML, CSS</p>
+          </div>
+
+          <div class="proyect-container">
+            <a
+              href="proyectos/climaApp/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="assets/clima_portada.png" alt="Weather App cover" />
+            </a>
+            <h3 class="titleLarge">Weather App</h3>
+            <p class="bodyLarge">
+              Enter the name of any city in the world and receive real-time
+              weather data.
+            </p>
+            <p class="tecStack bodyMedium">API, JavaScript, HTML, CSS</p>
+          </div>
+        </div>
+        <div class="desktop-proyects">
+          <div class="desktop-proyect-container">
+            <a
+              href="https://github.com/ddalio/proyecto-alberdi-unrc-2025"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/club-alberdi_portada.png"
+                alt="Sports Club Platform cover"
+              />
+            </a>
+            <div class="proyect-description">
+              <h3 class="headlineMedium">Sports Club Platform</h3>
+              <p class="titleLarge">
+                Web application for data management and consultation. The data
+                corresponds to reservations managed by Club Alberdi from the
+                city of Río Cuarto.
+              </p>
+              <p class="tecStack titleLarge">Python, Flask, SQLite, Docker</p>
+            </div>
+          </div>
+
+          <div class="desktop-proyect-container">
+            <a
+              href="https://github.com/AlieniAgustin/obvio-wallet"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/obvio_portada.png"
+                alt="Obvio Wallet project cover"
+              />
+            </a>
+            <div class="proyect-description">
+              <h3 class="headlineMedium">Obvio Wallet</h3>
+              <p class="titleLarge">
+                Obvio Wallet is a digital wallet developed with basic financial
+                management features and focused on software system modeling and
+                design.
+              </p>
+              <p class="tecStack titleLarge">
+                Ruby, SQLite, Sinatra, Docker, HTML, CSS
+              </p>
+            </div>
+          </div>
+
+          <div class="desktop-proyect-container">
+            <a
+              href="proyectos/planEstudio/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/plan_estudio_portada.png"
+                alt="Study Plan project cover"
+              />
+            </a>
+            <div class="proyect-description">
+              <h3 class="headlineMedium">Study Plan</h3>
+              <p class="titleLarge">
+                First version of the “Study Plan” project, currently functional
+                only for my degree program at my university. Project under
+                development and subject to future improvements.
+              </p>
+              <p class="tecStack titleLarge">Flutter, Dart, Firebase</p>
+            </div>
+          </div>
+
+          <div class="desktop-proyect-container">
+            <a
+              href="proyectos/come-burbujas/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/come_burbujas_portada.png"
+                alt="Bubble Eater game cover"
+              />
+            </a>
+            <div class="proyect-description">
+              <h3 class="headlineMedium">Bubble Eater</h3>
+              <p class="titleLarge">
+                A game where you control a bubble using the WASD keys. Developed
+                in JavaScript using canvas.
+              </p>
+              <p class="tecStack titleLarge">JavaScript, HTML, CSS</p>
+            </div>
+          </div>
+
+          <div class="desktop-proyect-container">
+            <a
+              href="proyectos/climaApp/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/clima_portada.png"
+                alt="Weather App project cover"
+              />
+            </a>
+            <div class="proyect-description">
+              <h3 class="headlineMedium">Weather App</h3>
+              <p class="titleLarge">
+                Enter the name of any city in the world and receive real-time
+                weather data.
+              </p>
+              <p class="tecStack titleLarge">API, JavaScript, HTML, CSS</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Experience & Education -->
+      <section id="referencias">
+        <div>
+          <h2 class="displaySmall">Experience</h2>
+          <ul class="list-component">
+            <li class="__item">
+              <div class="card-component">
+                <h2 class="__year">June 2024 - Present</h2>
+                <h1 class="__title">University Study Plan Platform</h1>
+                <div class="tags">
+                  <span>Flutter</span>
+                  <span>Dart</span>
+                  <span>Firebase</span>
+                </div>
+                <a
+                  href="proyectos/planEstudio/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Link</a
+                >
+              </div>
+            </li>
+            <li class="__item">
+              <div class="card-component">
+                <h2 class="__year">January 2024 - September 2024</h2>
+                <h1 class="__title">
+                  Mobile application for loan and client management
+                </h1>
+                <div class="tags">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>MongoDB</span>
+                  <span>Expo</span>
+                </div>
+                <p class="__text">
+                  The available version for viewing is outdated and not the one
+                  currently in use.
+                </p>
+                <a
+                  href="https://github.com/Jhonatan-calle/Aplicacion-mobil-React-Contador"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Link</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="displaySmall">Education</h2>
+          <ul class="list-component">
+            <li class="__item">
+              <div class="card-component">
+                <h2 class="__year">2021 - Present</h2>
+                <h1 class="__title">Bachelor's Degree in Computer Science</h1>
+                <h3 class="__subtitle">National University of Río Cuarto</h3>
+                <p class="__text">
+                  Currently (2025) taking third and fourth-year courses of the
+                  program.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Skills -->
+      <section id="skills">
+        <h1 class="displayMedium">Skills</h1>
+        <div class="skills-container">
+          <img src="assets/html-5.png" alt="HTML logo" />
+          <img src="assets/css.png" alt="CSS logo" />
+          <img src="assets/javaScript.png" alt="JavaScript logo" />
+          <img src="assets/java.png" alt="Java logo" />
+          <img src="assets/git.png" alt="Git logo" />
+          <img src="assets/gitHub.png" alt="GitHub logo" />
+          <img src="assets/flutter.png" alt="Flutter logo" />
+          <img src="assets/react.png" alt="React logo" />
+          <img src="assets/sql.png" alt="SQL logo" />
+          <img src="assets/mongoDb.png" alt="MongoDB logo" />
+          <img src="assets/firebase.png" alt="Firebase logo" />
+          <img src="assets/api.png" alt="API logo" />
+          <img src="assets/dart.png" alt="Dart logo" />
+          <img src="assets/linux.png" alt="Linux logo" />
+        </div>
+      </section>
+    </main>
+
+    <hr />
+
+    <!-- Footer -->
+    <footer id="contacto">
+      <p class="titleLarge">There are more projects on my GitHub!</p>
+      <p class="bodyLarge">
+        Explore more projects and recent activity on my GitHub profile
+      </p>
+      <p class="bodyLarge">Río Cuarto, Córdoba, Argentina</p>
+
+      <div class="icons-container">
+        <a
+          href="https://github.com/Jhonatan-calle"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-github fa-2xl"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/jhonatan-calle-galeano/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-linkedin fa-2xl"></i>
+        </a>
+      </div>
+
+      <p class="bodyMedium">jhonatancallegaleano@gmail.com</p>
     </footer>
 
-    <!-- Archivos JavaScript -->
+    <!-- JavaScript files -->
     <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/150bbdffcc.js" crossorigin="anonymous"></script>
-
-</body>
-
+    <script
+      src="https://kit.fontawesome.com/150bbdffcc.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
