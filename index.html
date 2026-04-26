@@ -1,372 +1,628 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Software developer with experience in web and mobile systems, databases, and process automation. Bachelor's Degree in Computer Science." />
-  <meta name="author" content="Jhonatan Calle" />
-  <meta name="keywords" content="developer, portfolio, Jhonatan Calle, programming, web, computing, computer science" />
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <title>Jhonatan Calle — Developer</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <meta name="google-site-verification" content="BM0rMNGOqbhP2lxD4-S2dfLeo9gKVbItG49JPANhAtk" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="Software developer with experience in web and mobile systems, databases, and process automation. Bachelor's Degree in Computer Science."
+    />
+    <meta name="author" content="Jhonatan Calle" />
+    <meta
+      name="keywords"
+      content="developer, portfolio, Jhonatan Calle, programming, web, computing, computer science"
+    />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <title>Jhonatan Calle — Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="google-site-verification"
+      content="BM0rMNGOqbhP2lxD4-S2dfLeo9gKVbItG49JPANhAtk"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a href="#inicio" class="logo">JhCalle</a>
 
-<header>
-  <div class="header-inner">
-    <a href="#inicio" class="logo">JhCalle</a>
+        <nav>
+          <ul>
+            <li><a href="#inicio">Home</a></li>
+            <li><a href="#proyectos">Projects</a></li>
+            <li><a href="#referencias">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contacto">Contact</a></li>
+          </ul>
+        </nav>
 
-    <nav>
-      <ul>
-        <li><a href="#inicio">Home</a></li>
-        <li><a href="#proyectos">Projects</a></li>
-        <li><a href="#referencias">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contacto">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="header-right">
-      <a href="index_es.html" class="lang-btn">ES</a>
-      <button class="theme-btn" id="themeToggle">☾</button>
-      <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
-      </button>
-    </div>
-  </div>
-  <nav class="mobile-nav" id="mobileNav">
-    <a href="#inicio" onclick="closeMobileNav()">Home</a>
-    <a href="#proyectos" onclick="closeMobileNav()">Projects</a>
-    <a href="#referencias" onclick="closeMobileNav()">Experience</a>
-    <a href="#skills" onclick="closeMobileNav()">Skills</a>
-    <a href="#contacto" onclick="closeMobileNav()">Contact</a>
-    <a href="index_es.html">Language: ES</a>
-  </nav>
-</header>
-
-<main>
-
-  <!-- Hero -->
-  <section id="inicio">
-    <div class="status-pill fade-up">
-      <span class="status-dot"></span>
-      Available for opportunities
-    </div>
-    <h1 class="hero-name fade-up">Jhonatan<br><em>Calle Galeano</em></h1>
-    <p class="hero-role fade-up">Software Developer &amp; Computer Science student</p>
-    <p class="hero-desc fade-up">
-      Developer with experience in web and mobile systems, database management, and process automation. Currently in my 5th year of a Bachelor's Degree in Computer Science at UNRC.
-    </p>
-    <div class="hero-links fade-up">
-      <a href="https://jhonatan-calle.github.io" target="_blank" rel="noopener" class="hero-link primary">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        Portfolio
-      </a>
-      <a href="https://github.com/Jhonatan-calle" target="_blank" rel="noopener" class="hero-link">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-        GitHub
-      </a>
-      <a href="https://www.linkedin.com/in/jhonatan-calle-galeano/" target="_blank" rel="noopener" class="hero-link">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-      <a href="mailto:jhonatancallegaleano@gmail.com" class="hero-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
-        Email
-      </a>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="proyectos" class="section">
-    <div class="section-head">
-      <p class="section-eyebrow">Selected work</p>
-      <h2 class="section-title">Projects</h2>
-    </div>
-
-    <div class="proj-grid">
-
-      <div class="proj-card is-new">
-        <span class="proj-badge">New · In progress</span>
-        <p class="proj-title">Business Management Mobile App</p>
-        <p class="proj-desc">Design and implementation of a mobile app for business logic: appointment scheduling, client management, and marketing-oriented statistics.</p>
-        <div class="proj-stack">
-          <span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">Supabase</span>
+        <div class="header-right">
+          <a href="index_es.html" class="lang-btn">ES</a>
+          <button class="theme-btn" id="themeToggle">☾</button>
+          <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
         </div>
       </div>
+      <nav class="mobile-nav" id="mobileNav">
+        <a href="#inicio" onclick="closeMobileNav()">Home</a>
+        <a href="#proyectos" onclick="closeMobileNav()">Projects</a>
+        <a href="#referencias" onclick="closeMobileNav()">Experience</a>
+        <a href="#skills" onclick="closeMobileNav()">Skills</a>
+        <a href="#contacto" onclick="closeMobileNav()">Contact</a>
+        <a href="index_es.html">Language: ES</a>
+      </nav>
+    </header>
 
-      <div class="proj-card is-new">
-        <span class="proj-badge">New · 2025</span>
-        <p class="proj-title">Virtual Wallet Web App</p>
-        <p class="proj-desc">University project — digital wallet with entity modeling, tests, validations, Docker in development, and sensitive data encryption.</p>
-        <div class="proj-stack">
-          <span class="tag">Ruby</span><span class="tag">Sinatra</span><span class="tag">SQLite3</span><span class="tag">Docker</span>
+    <main>
+      <!-- Hero -->
+      <section id="inicio">
+        <div class="status-pill fade-up">
+          <span class="status-dot"></span>
+          Available for opportunities
         </div>
-        <a href="https://github.com/AlieniAgustin/obvio-wallet" target="_blank" rel="noopener" class="proj-link">
-          View repo
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-        </a>
-      </div>
-
-      <div class="proj-card">
-        <p class="proj-title">Sports Club Platform</p>
-        <p class="proj-desc">Web app for managing and querying reservation data for Club Alberdi in Río Cuarto.</p>
-        <div class="proj-stack">
-          <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQLite</span><span class="tag">Docker</span>
+        <h1 class="hero-name fade-up">
+          Jhonatan<br /><em>Calle Galeano</em>
+        </h1>
+        <p class="hero-role fade-up">
+          Software Developer &amp; Computer Science student
+        </p>
+        <p class="hero-desc fade-up">
+          Developer with experience in web and mobile systems, database
+          management, and process automation. Currently in my 5th year of a
+          Bachelor's Degree in Computer Science at UNRC.
+        </p>
+        <div class="hero-links fade-up">
+          <a
+            href="https://jhonatan-calle.github.io"
+            target="_blank"
+            rel="noopener"
+            class="hero-link primary"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path
+                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+              />
+            </svg>
+            Portfolio
+          </a>
+          <a
+            href="https://github.com/Jhonatan-calle"
+            target="_blank"
+            rel="noopener"
+            class="hero-link"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"
+              />
+            </svg>
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jhonatan-calle-galeano/"
+            target="_blank"
+            rel="noopener"
+            class="hero-link"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+            LinkedIn
+          </a>
+          <a
+            href="mailto:jhonatancallegaleano@gmail.com"
+            class="hero-link"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-10 7L2 7" />
+            </svg>
+            Email
+          </a>
         </div>
-        <a href="https://github.com/ddalio/proyecto-alberdi-unrc-2025" target="_blank" rel="noopener" class="proj-link">
-          View repo
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-        </a>
-      </div>
+      </section>
 
-      <div class="proj-card">
-        <p class="proj-title">Study Plan</p>
-        <p class="proj-desc">Tool that generates study plans based on the student's availability and course prerequisites. Solves scheduling conflicts at UNRC.</p>
-        <div class="proj-stack">
-          <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Firebase</span>
+      <!-- Projects -->
+      <section id="proyectos" class="section">
+        <div class="section-head">
+          <p class="section-eyebrow">Selected work</p>
+          <h2 class="section-title">Projects</h2>
         </div>
-        <a href="proyectos/planEstudio/index.html" target="_blank" rel="noopener" class="proj-link">
-          Live demo
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-        </a>
-      </div>
 
-      <div class="proj-card">
-        <p class="proj-title">Loan &amp; Client Management App</p>
-        <p class="proj-desc">Mobile app for internal business management: loan tracking, client management, automatic interest calculation, and financial reports with real-time sync.</p>
-        <div class="proj-stack">
-          <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">Expo</span>
+        <div class="proj-grid">
+          <div class="proj-card is-new">
+            <span class="proj-badge">New · In progress</span>
+            <p class="proj-title">Business Management Mobile App</p>
+            <p class="proj-desc">
+              Design and implementation of a mobile app for business logic:
+              appointment scheduling, client management, and
+              marketing-oriented statistics.
+            </p>
+            <div class="proj-stack">
+              <span class="tag">React Native</span
+              ><span class="tag">Expo</span
+              ><span class="tag">Supabase</span>
+            </div>
+            <a
+              href="https://github.com/Jhonatan-calle/mobile-scheduling-app"
+              target="_blank"
+              rel="noopener"
+              class="proj-link"
+            >
+              View repo
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="proj-card is-new">
+            <span class="proj-badge">New · 2025</span>
+            <p class="proj-title">Virtual Wallet Web App</p>
+            <p class="proj-desc">
+              University project — digital wallet with entity modeling,
+              tests, validations, Docker in development, and sensitive data
+              encryption.
+            </p>
+            <div class="proj-stack">
+              <span class="tag">Ruby</span><span class="tag">Sinatra</span
+              ><span class="tag">SQLite3</span
+              ><span class="tag">Docker</span>
+            </div>
+            <a
+              href="https://github.com/AlieniAgustin/obvio-wallet"
+              target="_blank"
+              rel="noopener"
+              class="proj-link"
+            >
+              View repo
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="proj-card">
+            <p class="proj-title">Sports Club Platform</p>
+            <p class="proj-desc">
+              Web app for managing and querying reservation data for Club
+              Alberdi in Río Cuarto.
+            </p>
+            <div class="proj-stack">
+              <span class="tag">Python</span><span class="tag">Flask</span
+              ><span class="tag">SQLite</span
+              ><span class="tag">Docker</span>
+            </div>
+            <a
+              href="https://github.com/ddalio/proyecto-alberdi-unrc-2025"
+              target="_blank"
+              rel="noopener"
+              class="proj-link"
+            >
+              View repo
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="proj-card">
+            <p class="proj-title">Study Plan</p>
+            <p class="proj-desc">
+              Tool that generates study plans based on the student's
+              availability and course prerequisites. Solves scheduling
+              conflicts at UNRC.
+            </p>
+            <div class="proj-stack">
+              <span class="tag">Flutter</span><span class="tag">Dart</span
+              ><span class="tag">Firebase</span>
+            </div>
+            <a
+              href="proyectos/planEstudio/index.html"
+              target="_blank"
+              rel="noopener"
+              class="proj-link"
+            >
+              Live demo
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="proj-card">
+            <p class="proj-title">Loan &amp; Client Management App</p>
+            <p class="proj-desc">
+              Mobile app for internal business management: loan tracking,
+              client management, automatic interest calculation, and
+              financial reports with real-time sync.
+            </p>
+            <div class="proj-stack">
+              <span class="tag">React</span><span class="tag">Node.js</span
+              ><span class="tag">MongoDB</span
+              ><span class="tag">Expo</span>
+            </div>
+            <a
+              href="https://github.com/Jhonatan-calle/Aplicacion-mobil-React-Contador"
+              target="_blank"
+              rel="noopener"
+              class="proj-link"
+            >
+              View repo
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="proj-card">
+            <p class="proj-title">Bubble Eater &amp; Weather App</p>
+            <p class="proj-desc">
+              Canvas-based bubble game controlled with WASD + real-time
+              weather app consuming an external API.
+            </p>
+            <div class="proj-stack">
+              <span class="tag">JavaScript</span
+              ><span class="tag">Canvas</span
+              ><span class="tag">REST API</span
+              ><span class="tag">HTML/CSS</span>
+            </div>
+            <a
+              href="proyectos/come-burbujas/index.html"
+              target="_blank"
+              rel="noopener"
+              class="proj-link"
+            >
+              Play game
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a>
+          </div>
         </div>
-        <a href="https://github.com/Jhonatan-calle/Aplicacion-mobil-React-Contador" target="_blank" rel="noopener" class="proj-link">
-          View repo
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-        </a>
-      </div>
+      </section>
 
-      <div class="proj-card">
-        <p class="proj-title">Bubble Eater &amp; Weather App</p>
-        <p class="proj-desc">Canvas-based bubble game controlled with WASD + real-time weather app consuming an external API.</p>
-        <div class="proj-stack">
-          <span class="tag">JavaScript</span><span class="tag">Canvas</span><span class="tag">REST API</span><span class="tag">HTML/CSS</span>
+      <!-- Experience & Education -->
+      <section id="referencias" class="section">
+        <div class="section-head">
+          <p class="section-eyebrow">Background</p>
+          <h2 class="section-title">Experience &amp; Education</h2>
         </div>
-        <a href="proyectos/come-burbujas/index.html" target="_blank" rel="noopener" class="proj-link">
-          Play game
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-        </a>
-      </div>
 
-    </div>
-  </section>
+        <div class="refs-grid">
+          <div>
+            <p class="refs-col-title">Experience</p>
+            <div class="timeline">
+              <div class="tl-item highlight">
+                <p class="tl-year">Dec 2025 – present</p>
+                <p class="tl-title">Business Management Mobile App</p>
+                <p class="tl-body">
+                  Active development of a mobile app for appointment
+                  scheduling, client management, and statistics.
+                </p>
+                <div class="tl-tags">
+                  <span class="tag">React Native</span
+                  ><span class="tag">Expo</span
+                  ><span class="tag">Supabase</span>
+                </div>
+              </div>
 
-  <!-- Experience & Education -->
-  <section id="referencias" class="section">
-    <div class="section-head">
-      <p class="section-eyebrow">Background</p>
-      <h2 class="section-title">Experience &amp; Education</h2>
-    </div>
+              <div class="tl-item highlight">
+                <p class="tl-year">2025 – present</p>
+                <p class="tl-title">
+                  Permanent Curricular Commission — UNRC
+                </p>
+                <p class="tl-body">
+                  Full member for the Computer Science degree. Active
+                  participation in academic management at the Faculty of
+                  Exact Sciences.
+                </p>
+              </div>
 
-    <div class="refs-grid">
-      <div>
-        <p class="refs-col-title">Experience</p>
-        <div class="timeline">
+              <div class="tl-item">
+                <p class="tl-year">2025</p>
+                <p class="tl-title">Extension Scholarship — UNRC</p>
+                <p class="tl-body">
+                  Custom software for the Malvinas War Veterans Association
+                  "Virgen del Rosario" and Club Juan B. Alberdi.
+                  Requirements gathering, DB design, and process
+                  systematization.
+                </p>
+              </div>
 
-          <div class="tl-item highlight">
-            <p class="tl-year">Dec 2025 – present</p>
-            <p class="tl-title">Business Management Mobile App</p>
-            <p class="tl-body">Active development of a mobile app for appointment scheduling, client management, and statistics.</p>
-            <div class="tl-tags">
-              <span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">Supabase</span>
+              <div class="tl-item">
+                <p class="tl-year">2024 – 2025</p>
+                <p class="tl-title">
+                  Argentine Programming Tournament (CPC Argentina)
+                </p>
+                <p class="tl-body">
+                  National competition. 3rd place at the Río Cuarto venue
+                  in 2025.
+                </p>
+              </div>
+
+              <div class="tl-item">
+                <p class="tl-year">2024 – 2025</p>
+                <p class="tl-title">
+                  Teaching Assistant — RIO Summer School, UNRC
+                </p>
+                <p class="tl-body">
+                  International event of the Computing Dept. Logistical
+                  support in intensive courses with global experts.
+                </p>
+              </div>
+
+              <div class="tl-item">
+                <p class="tl-year">Jun 2024 – present</p>
+                <p class="tl-title">Study Plan Platform</p>
+                <p class="tl-body">Flutter · Dart · Firebase</p>
+              </div>
+
+              <div class="tl-item">
+                <p class="tl-year">2024</p>
+                <p class="tl-title">
+                  Teaching Assistant — Intro to Computing and Programming I
+                </p>
+                <p class="tl-body">
+                  UNRC · Classroom collaboration alongside prof. Guillermo
+                  Ariel.
+                </p>
+              </div>
+
+              <div class="tl-item">
+                <p class="tl-year">Jan – Sep 2024</p>
+                <p class="tl-title">Loan &amp; Client Management App</p>
+                <p class="tl-body">React · Node.js · MongoDB · Expo</p>
+              </div>
             </div>
           </div>
 
-          <div class="tl-item highlight">
-            <p class="tl-year">2025 – present</p>
-            <p class="tl-title">Permanent Curricular Commission — UNRC</p>
-            <p class="tl-body">Full member for the Computer Science degree. Active participation in academic management at the Faculty of Exact Sciences.</p>
-          </div>
-
-          <div class="tl-item">
-            <p class="tl-year">2025</p>
-            <p class="tl-title">Extension Scholarship — UNRC</p>
-            <p class="tl-body">Custom software for the Malvinas War Veterans Association "Virgen del Rosario" and Club Juan B. Alberdi. Requirements gathering, DB design, and process systematization.</p>
-          </div>
-
-          <div class="tl-item">
-            <p class="tl-year">2024 – 2025</p>
-            <p class="tl-title">Argentine Programming Tournament (CPC Argentina)</p>
-            <p class="tl-body">National competition. 3rd place at the Río Cuarto venue in 2025.</p>
-          </div>
-
-          <div class="tl-item">
-            <p class="tl-year">2024 – 2025</p>
-            <p class="tl-title">Teaching Assistant — RIO Summer School, UNRC</p>
-            <p class="tl-body">International event of the Computing Dept. Logistical support in intensive courses with global experts.</p>
-          </div>
-
-          <div class="tl-item">
-            <p class="tl-year">Jun 2024 – present</p>
-            <p class="tl-title">Study Plan Platform</p>
-            <p class="tl-body">Flutter · Dart · Firebase</p>
-          </div>
-
-          <div class="tl-item">
-            <p class="tl-year">2024</p>
-            <p class="tl-title">Teaching Assistant — Intro to Computing and Programming I</p>
-            <p class="tl-body">UNRC · Classroom collaboration alongside prof. Guillermo Ariel.</p>
-          </div>
-
-          <div class="tl-item">
-            <p class="tl-year">Jan – Sep 2024</p>
-            <p class="tl-title">Loan &amp; Client Management App</p>
-            <p class="tl-body">React · Node.js · MongoDB · Expo</p>
-          </div>
-
-        </div>
-      </div>
-
-      <div>
-        <p class="refs-col-title">Education</p>
-        <div class="timeline">
-          <div class="tl-item highlight">
-            <p class="tl-year">2021 – present</p>
-            <p class="tl-title">Bachelor's Degree in Computer Science</p>
-            <p class="tl-body">Universidad Nacional de Río Cuarto<br>5th year · 70.34% completed</p>
+          <div>
+            <p class="refs-col-title">Education</p>
+            <div class="timeline">
+              <div class="tl-item highlight">
+                <p class="tl-year">2021 – present</p>
+                <p class="tl-title">
+                  Bachelor's Degree in Computer Science
+                </p>
+                <p class="tl-body">
+                  Universidad Nacional de Río Cuarto<br />5th year · 70.34%
+                  completed
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- Skills -->
-  <section id="skills" class="section">
-    <div class="section-head">
-      <p class="section-eyebrow">Toolkit</p>
-      <h2 class="section-title">Skills</h2>
-    </div>
-
-    <div class="skill-groups">
-      <div>
-        <p class="skill-group-label">Languages</p>
-        <div class="chips">
-          <span class="chip accent">TypeScript</span>
-          <span class="chip accent">JavaScript</span>
-          <span class="chip">Java</span>
-          <span class="chip">Python</span>
-          <span class="chip">C/C++</span>
-          <span class="chip">Dart</span>
-          <span class="chip">Ruby</span>
-          <span class="chip">PHP</span>
-          <span class="chip">Haskell</span>
-          <span class="chip">HTML</span>
-          <span class="chip">CSS</span>
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <div class="section-head">
+          <p class="section-eyebrow">Toolkit</p>
+          <h2 class="section-title">Skills</h2>
         </div>
-      </div>
-      <div>
-        <p class="skill-group-label">Frameworks &amp; Libraries</p>
-        <div class="chips">
-          <span class="chip accent">React Native</span>
-          <span class="chip accent">React</span>
-          <span class="chip">Flutter</span>
-          <span class="chip">Express.js</span>
-          <span class="chip">Laravel</span>
-          <span class="chip">Sinatra</span>
+
+        <div class="skill-groups">
+          <div>
+            <p class="skill-group-label">Languages</p>
+            <div class="chips">
+              <span class="chip accent">TypeScript</span>
+              <span class="chip accent">JavaScript</span>
+              <span class="chip accent">Java</span>
+              <span class="chip">Python</span>
+              <span class="chip">C/C++</span>
+              <span class="chip">Dart</span>
+              <span class="chip">Ruby</span>
+              <span class="chip">PHP</span>
+              <span class="chip">Haskell</span>
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+            </div>
+          </div>
+          <div>
+            <p class="skill-group-label">Frameworks &amp; Libraries</p>
+            <div class="chips">
+              <span class="chip accent">React Native</span>
+              <span class="chip accent">React</span>
+              <span class="chip">Flutter</span>
+              <span class="chip">Express.js</span>
+              <span class="chip">Laravel</span>
+              <span class="chip">Sinatra</span>
+            </div>
+          </div>
+          <div>
+            <p class="skill-group-label">Databases</p>
+            <div class="chips">
+              <span class="chip">Firebase</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">Supabase</span>
+              <span class="chip">SQL</span>
+              <span class="chip">SQLite</span>
+              <span class="chip">NoSQL</span>
+            </div>
+          </div>
+          <div>
+            <p class="skill-group-label">Tools &amp; Other</p>
+            <div class="chips">
+              <span class="chip">Git</span>
+              <span class="chip">Docker</span>
+              <span class="chip">REST API</span>
+              <span class="chip">SCRUM</span>
+              <span class="chip">UX/UI</span>
+              <span class="chip">Apache2</span>
+              <span class="chip">Neural Networks</span>
+              <span class="chip">ML / RL</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div>
-        <p class="skill-group-label">Databases</p>
-        <div class="chips">
-          <span class="chip">Firebase</span>
-          <span class="chip">MongoDB</span>
-          <span class="chip">Supabase</span>
-          <span class="chip">SQL</span>
-          <span class="chip">SQLite</span>
-          <span class="chip">NoSQL</span>
+
+        <div class="lang-row">
+          <div class="lang-card">
+            <p class="lang-name">Spanish</p>
+            <p class="lang-level">Native</p>
+          </div>
+          <div class="lang-card">
+            <p class="lang-name">English</p>
+            <p class="lang-level">Advanced B2</p>
+          </div>
         </div>
+      </section>
+    </main>
+
+    <footer id="contacto">
+      <p class="footer-name">Jhonatan Calle</p>
+      <p class="footer-loc">Río Cuarto, Córdoba, Argentina</p>
+      <div class="footer-links">
+        <a
+          href="https://github.com/Jhonatan-calle"
+          target="_blank"
+          rel="noopener"
+          class="footer-icon"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/jhonatan-calle-galeano/"
+          target="_blank"
+          rel="noopener"
+          class="footer-icon"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+            />
+          </svg>
+        </a>
+        <a
+          href="mailto:jhonatancallegaleano@gmail.com"
+          class="footer-icon"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-10 7L2 7" />
+          </svg>
+        </a>
       </div>
-      <div>
-        <p class="skill-group-label">Tools &amp; Other</p>
-        <div class="chips">
-          <span class="chip">Git</span>
-          <span class="chip">Docker</span>
-          <span class="chip">REST API</span>
-          <span class="chip">SCRUM</span>
-          <span class="chip">UX/UI</span>
-          <span class="chip">Apache2</span>
-          <span class="chip">Neural Networks</span>
-          <span class="chip">ML / RL</span>
-        </div>
-      </div>
-    </div>
+      <p class="footer-email">jhonatancallegaleano@gmail.com</p>
+    </footer>
 
-    <div class="lang-row">
-      <div class="lang-card">
-        <p class="lang-name">Spanish</p>
-        <p class="lang-level">Native</p>
-      </div>
-      <div class="lang-card">
-        <p class="lang-name">English</p>
-        <p class="lang-level">Advanced</p>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer id="contacto">
-  <p class="footer-name">Jhonatan Calle</p>
-  <p class="footer-loc">Río Cuarto, Córdoba, Argentina</p>
-  <div class="footer-links">
-    <a href="https://github.com/Jhonatan-calle" target="_blank" rel="noopener" class="footer-icon">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-    </a>
-    <a href="https://www.linkedin.com/in/jhonatan-calle-galeano/" target="_blank" rel="noopener" class="footer-icon">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-    </a>
-    <a href="mailto:jhonatancallegaleano@gmail.com" class="footer-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
-    </a>
-  </div>
-  <p class="footer-email">jhonatancallegaleano@gmail.com</p>
-</footer>
-
-<script>
-  // Theme
-  const root = document.documentElement;
-  const btn = document.getElementById('themeToggle');
-  const saved = localStorage.getItem('theme') || 'light';
-  if (saved === 'dark') { root.setAttribute('data-theme','dark'); btn.textContent = '☀'; }
-  btn.addEventListener('click', () => {
-    const isDark = root.getAttribute('data-theme') === 'dark';
-    root.setAttribute('data-theme', isDark ? 'light' : 'dark');
-    btn.textContent = isDark ? '☾' : '☀';
-    localStorage.setItem('theme', isDark ? 'light' : 'dark');
-  });
-
-  // Mobile menu
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileNav = document.getElementById('mobileNav');
-  menuBtn.addEventListener('click', () => mobileNav.classList.toggle('open'));
-  function closeMobileNav() { mobileNav.classList.remove('open'); }
-
-  // Smooth active nav highlight on scroll
-  const sections = document.querySelectorAll('section[id], footer[id]');
-  const navLinks = document.querySelectorAll('nav a');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        navLinks.forEach(l => l.style.color = '');
-        const active = document.querySelector(`nav a[href="#${e.target.id}"]`);
-        if (active) active.style.color = 'var(--text)';
+    <script>
+      // Theme
+      const root = document.documentElement;
+      const btn = document.getElementById("themeToggle");
+      const saved = localStorage.getItem("theme") || "light";
+      if (saved === "dark") {
+        root.setAttribute("data-theme", "dark");
+        btn.textContent = "☀";
       }
-    });
-  }, { rootMargin: '-40% 0px -55% 0px' });
-  sections.forEach(s => observer.observe(s));
-</script>
+      btn.addEventListener("click", () => {
+        const isDark = root.getAttribute("data-theme") === "dark";
+        root.setAttribute("data-theme", isDark ? "light" : "dark");
+        btn.textContent = isDark ? "☾" : "☀";
+        localStorage.setItem("theme", isDark ? "light" : "dark");
+      });
 
-</body>
+      // Mobile menu
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileNav = document.getElementById("mobileNav");
+      menuBtn.addEventListener("click", () =>
+        mobileNav.classList.toggle("open"),
+      );
+      function closeMobileNav() {
+        mobileNav.classList.remove("open");
+      }
+
+      // Smooth active nav highlight on scroll
+      const sections = document.querySelectorAll(
+        "section[id], footer[id]",
+      );
+      const navLinks = document.querySelectorAll("nav a");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              navLinks.forEach((l) => (l.style.color = ""));
+              const active = document.querySelector(
+                `nav a[href="#${e.target.id}"]`,
+              );
+              if (active) active.style.color = "var(--text)";
+            }
+          });
+        },
+        { rootMargin: "-40% 0px -55% 0px" },
+      );
+      sections.forEach((s) => observer.observe(s));
+    </script>
+  </body>
 </html>

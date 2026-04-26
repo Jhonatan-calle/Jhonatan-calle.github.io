@@ -3,6 +3,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
+  --img: url("assets/undraw_random-thoughts_spw5.svg");
   --bg:        #F4F1EC;
   --bg2:       #EAE6DC;
   --bg3:       #DEDAD0;
@@ -491,9 +492,69 @@ footer {
   .proj-grid { grid-template-columns: 1fr; }
   .section { padding: 2.5rem 0; }
   footer { padding: 2rem 1.25rem; }
+
+  #inicio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+  background-image:
+    linear-gradient(
+      to right,
+      var(--bg) 0%,
+      25%,
+      transparent 100%
+    ),
+    url("assets/undraw_deep-work_muov.svg");
+    background-repeat: no-repeat;
+    background-position: 100% 55%;
+    background-size: 55% auto;
+
+    opacity: 0.8
+    pointer-events: none;
+
+    /* Importante: que quede detrás del contenido */
+    z-index: 0;
+  }
+
+  /* Subimos el contenido por encima del ::before */
+  #inicio > * {
+    position: relative;
+    z-index: 1;
+  }
+
 }
 
 @media (min-width: 641px) {
+  #inicio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+  background-image:
+    linear-gradient(
+      to right,
+      var(--bg) 0%,
+      25%,
+      transparent 100%
+    ),
+    var(--img);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 55% auto;
+
+    opacity: 0.8
+    pointer-events: none;
+
+    /* Importante: que quede detrás del contenido */
+    z-index: 0;
+  }
+
+  /* Subimos el contenido por encima del ::before */
+  #inicio > * {
+    position: relative;
+    z-index: 1;
+  }
   .mobile-menu-btn { display: none; }
   .mobile-nav { display: none !important; }
 }
