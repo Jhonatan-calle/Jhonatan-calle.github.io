@@ -547,6 +547,44 @@
             <p class="lang-level">Avanzado B2</p>
           </div>
         </div>
+        <div class="lang-row">
+          <div class="waka-section">
+            <p class="skill-group-label" style="margin-top: 2rem">
+              Actividad de programación (Estadísticas de Wakatime)
+            </p>
+            <div id="waka-stats" class="waka-grid">
+              <div class="waka-card waka-loading">Cargando stats…</div>
+            </div>
+          </div>
+
+          <script>
+            function wakaAllTime(data) {
+              const gt = data.data.grand_total;
+              const best = data.data.best_day;
+
+              document.getElementById("waka-stats").innerHTML = `
+      <div class="waka-card">
+        <p class="waka-label">Horas totales escrbiendo código</p>
+        <p class="waka-value">${gt.human_readable_total}</p>
+      </div>
+      <div class="waka-card">
+        <p class="waka-label">Mejor día</p>
+        <p class="waka-value">${best.text}</p>
+        <p class="waka-sub">${best.date}</p>
+      </div>
+    `;
+            }
+
+            document.getElementById("waka-stats").innerHTML = `
+    <div class="waka-card waka-loading">Cargando stats…</div>
+  `;
+
+            const s = document.createElement("script");
+            s.src =
+              "https://wakatime.com/share/@JhonatanCalle/29b5820c-9d5e-48c3-ba4e-66490ea365fe.json?callback=wakaAllTime";
+            document.head.appendChild(s);
+          </script>
+        </div>
       </section>
     </main>
 
