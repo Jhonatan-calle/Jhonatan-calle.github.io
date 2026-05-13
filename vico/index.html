@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestro Amor ❤️</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      position: relative;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.1);
+      opacity: 0;
+      transition: transform 2s ease, opacity 2s ease;
+    }
+
+    img.loaded {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    /* Glass-like border buttons */
+    .button {
+      position: absolute;
+      padding: 30px 45px;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    .button:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    }
+
+    .top {
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .bottom {
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .left {
+      left: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .right {
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    /* Centered Anniversary text */
+    .anniversary-text {
+      position: absolute;
+      color: white;
+      font-family: 'Great Vibes', cursive;
+      font-size: 72px;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+      z-index: 5;
+      pointer-events: none;
+      user-select: none;
+      text-align: center;
+      white-space: nowrap;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .line {
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .line.visible {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .button {
+        padding: 20px 30px;
+        font-size: 14px;
+      }
+
+      .anniversary-text {
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Center image -->
+  <img id="mainImage" src="images/foto-principal.jpg" alt="Nuestra foto" />
+
+  <!-- Centered text -->
+  <div class="anniversary-text">
+    <div id="line1" class="line"></div>
+    <div id="line2" class="line"></div>
+  </div>
+
+  <!-- Side buttons -->
+  <a href="letter.html" class="button top">Mi Carta Para Ti ❤️</a>
+  <a href="gallery.html" class="button bottom">Nuestra Galería</a>
+  <a href="contador.html" class="button left">Contador</a>
+  <a href="sorpresa.html" class="button right">💌 Sorpresa</a>
+
+  <script>
+    const img = document.getElementById('mainImage');
+    const line1 = document.getElementById('line1');
+    const line2 = document.getElementById('line2');
+
+    // PERSONALIZA ESTOS MENSAJES
+    const message1 = "¡Te Amo Mucho! 💕";
+    const message2 = "Feliz por estos primeros 2 meses contigo";
+
+    let index1 = 0;
+    let index2 = 0;
+
+    // Fade-in image first
+    window.addEventListener('load', () => {
+      img.classList.add('loaded');
+      setTimeout(() => typeLine1(), 1500);
+    });
+
+    // Type first line
+    function typeLine1() {
+      line1.classList.add('visible');
+      if (index1 < message1.length) {
+        line1.textContent += message1.charAt(index1);
+        index1++;
+        setTimeout(typeLine1, 100);
+      } else {
+        // wait 2 seconds before starting line 2
+        setTimeout(() => typeLine2(), 2000);
+      }
+    }
+
+    // Type second line
+    function typeLine2() {
+      line2.classList.add('visible');
+      if (index2 < message2.length) {
+        line2.textContent += message2.charAt(index2);
+        index2++;
+        setTimeout(typeLine2, 100);
+      }
+    }
+
+    // Parallax movement
+    document.addEventListener('mousemove', (e) => {
+      const moveX = -(e.clientX - window.innerWidth / 2.5) * 0.05;
+      const moveY = -(e.clientY - window.innerHeight / 2.5) * 0.05;
+      img.style.transform = `scale(1.05) translate(${moveX}px, ${moveY}px)`;
+    });
+
+    document.addEventListener('mouseleave', () => {
+      img.style.transform = `scale(1.05) translate(0, 0)`;
+    });
+  </script>
+</body>
+</html>

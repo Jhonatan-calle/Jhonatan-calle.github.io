@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Carta Para Ti 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      font-family: 'Georgia', serif;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 30px;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 50px;
+      text-decoration: none;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .letter {
+      background: white;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      animation: slideUp 0.8s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .letter-header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #667eea;
+      padding-bottom: 20px;
+    }
+
+    .letter-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #667eea;
+      margin-bottom: 10px;
+    }
+
+    .letter-date {
+      color: #999;
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
+    .letter-content {
+      line-height: 1.8;
+      color: #333;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .letter-content p {
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .letter-signature {
+      text-align: right;
+      margin-top: 40px;
+      border-top: 2px solid #667eea;
+      padding-top: 20px;
+    }
+
+    .signature-name {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #764ba2;
+      margin-bottom: 10px;
+    }
+
+    .signature-date {
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    .hearts {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .letter {
+        padding: 30px 20px;
+      }
+
+      .letter-title {
+        font-size: 1.5rem;
+      }
+
+      .letter-content {
+        font-size: 1rem;
+      }
+
+      .signature-name {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-btn">← Volver</a>
+
+    <div class="letter">
+      <div class="letter-header">
+        <div class="letter-title">Mi Amor,</div>
+        <div class="letter-date" id="currentDate"></div>
+      </div>
+
+      <div class="letter-content">
+        <p>
+          Qué difícil esto de escribirte una carta,
+          <br>no sé por dónde empezar, ni cómo se arranca
+          <br>lo más bonito que tengo sos vos, y tu voz que me calma.
+          <br>Así que lo mejor que puedo hacer es describirte, y ya basta.
+        </p>
+
+        <p>
+          Mi táctica es simple, y en ella me ampara:
+          <br>mirarte, aprender cómo sos, quererte sin pausa.
+          <br>Te podría decir miles cosas que faltan,
+          <br>escribirte mil noches y quedarme sin palabras
+          <br>dedicarte la luna en cada madrugada.
+        </p>
+
+        <p>
+          Pero lo más profundo ocurre en la calma,
+          <br>en el silencio quieto de la noche cerrada,
+          <br>en que te pienso con amor cada noche callada,
+          <br>como quien abraza un sueño que nunca se acaba.
+        </p>
+
+        <p>
+          Tu nombre es un suspiro, una luz que me abraza.
+          <br>Y agradezco lo que no sabía que faltaba,
+          <br>todo lo que no supe querer hasta que llegaste al alba.
+        </p>
+
+        <p>
+          Como decir te amo por primera vez en voz alta,
+          <br>y descubrir que no hay forma de parar — que se graba.
+        </p>
+      </div>
+
+      <div class="letter-signature">
+        <div class="signature-name">Con todo mi amor,</div>
+        <div style="font-family: 'Great Vibes', cursive; font-size: 1.5rem; color: #764ba2;">Jhonatan</div>
+        <div class="signature-date" id="signatureDate"></div>
+      </div>
+
+      <div class="hearts">
+        💕 💕 💕
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mostrar la fecha actual
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const today = new Date();
+    const dateString = today.toLocaleDateString('es-ES', options);
+
+    document.getElementById('currentDate').textContent = dateString;
+    document.getElementById('signatureDate').textContent = dateString;
+  </script>
+</body>
+</html>

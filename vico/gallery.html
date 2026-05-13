@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Nuestra Galería 📸</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Crimson Text", serif;
+        letter-spacing: 0.2rem;
+        line-height: 1.9;
+        color: #8b0000;
+        background: linear-gradient(135deg, #fff5c0 0%, #ffb396 100%);
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .back-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 50;
+        padding: 10px 20px;
+        background: rgba(139, 0, 0, 0.7);
+        color: #fff5c0;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 50px;
+        text-decoration: none;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        font-size: 14px;
+      }
+
+      .back-btn:hover {
+        background: rgba(139, 0, 0, 0.9);
+      }
+
+      .gal {
+        overflow: hidden;
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url(https://images.unsplash.com/photo-1514477917009-389c76a86b68?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80);
+        background-position: left;
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+        padding: 60px 20px;
+      }
+
+      .gal h1 {
+        font-size: calc(1.5rem + 1vw);
+        color: #fff5c0;
+        text-shadow: 0.2rem 0.1rem 0.2rem #ff4646;
+        z-index: 30;
+        margin-bottom: 40px;
+        margin-top: 20px;
+      }
+
+      /* Modal para foto grande */
+      .gal-big {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255, 179, 150, 0.5);
+        z-index: 200;
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .gal-big.show-galbig {
+        display: flex;
+      }
+
+      .gal-big img {
+        aspect-ratio: 3.5/4;
+        width: 28rem;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      }
+
+      @media screen and (min-width: 400px) {
+        .gal-big img {
+          width: 32rem;
+        }
+      }
+
+      @media screen and (min-width: 800px) {
+        .gal-big img {
+          width: 40rem;
+        }
+      }
+
+      /* Carrusel 3D */
+      .gal-box {
+        position: relative;
+        height: 25rem;
+        width: 20rem;
+        transform-style: preserve-3d;
+        transform: translateZ(0);
+        animation: rotate3D 70s linear infinite;
+        cursor: pointer;
+      }
+
+      .gal-box span {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transform-origin: center;
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(550px);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .gal-box span:hover {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+      }
+
+      .gal-box span img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transform-style: preserve-3d;
+      }
+
+      @keyframes rotate3D {
+        from {
+          transform: perspective(3000px) rotateY(0deg);
+        }
+        to {
+          transform: perspective(3000px) rotateY(360deg);
+        }
+      }
+
+      .info-text {
+        color: #fff5c0;
+        text-shadow: 0.2rem 0.1rem 0.2rem #8b0000;
+        font-size: calc(0.8rem + 0.6vw);
+        z-index: 30;
+        font-family: "Georgia", serif;
+        letter-spacing: 0.1rem;
+        font-weight: 300;
+        font-style: italic;
+        margin-top: 40px;
+      }
+
+      @media (max-width: 768px) {
+        .gal-box {
+          height: 20rem;
+          width: 15rem;
+        }
+
+        .gal h1 {
+          font-size: 1.5rem;
+        }
+
+        .back-btn {
+          padding: 8px 15px;
+          font-size: 12px;
+        }
+
+        .info-text {
+          font-size: 0.8rem;
+        }
+      }
+
+      /* Sección de Lugares Especiales */
+      .lugares-section {
+        width: 100%;
+        background: linear-gradient(135deg, #ffb396 0%, #fff5c0 100%);
+        padding: 80px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .lugares-section h2 {
+        font-size: calc(1.5rem + 1vw);
+        color: #8b0000;
+        text-shadow: 0.1rem 0.1rem 0.1rem rgba(139, 0, 0, 0.2);
+        margin-bottom: 60px;
+        font-family: "Georgia", serif;
+        font-weight: 300;
+        text-align: center;
+        max-width: 800px;
+        line-height: 1.6;
+      }
+
+      .lugares-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        max-width: 1200px;
+        width: 100%;
+      }
+
+      .lugar-foto {
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(139, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .lugar-foto:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(139, 0, 0, 0.25);
+      }
+
+      .lugar-foto img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .lugar-foto:hover img {
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        .lugares-section {
+          padding: 60px 15px;
+        }
+
+        .lugares-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .lugares-section h2 {
+          font-size: 1.3rem;
+          margin-bottom: 40px;
+        }
+      }
+
+      /* Sección de Momentos que Marcan Historia */
+      .momentos-section {
+        width: 100%;
+        background: linear-gradient(135deg, #fff5c0 0%, #ffb396 100%);
+        padding: 80px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .momentos-section h2 {
+        font-size: calc(1.5rem + 1vw);
+        color: #8b0000;
+        text-shadow: 0.1rem 0.1rem 0.1rem rgba(139, 0, 0, 0.2);
+        margin-bottom: 60px;
+        font-family: "Georgia", serif;
+        font-weight: 300;
+        text-align: center;
+        max-width: 800px;
+        line-height: 1.6;
+      }
+
+      .momentos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        width: 100%;
+      }
+
+      .momento-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(139, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .momento-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(139, 0, 0, 0.25);
+      }
+
+      .momento-card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .momento-card:hover img {
+        transform: scale(1.08);
+      }
+
+      .momento-card-desc {
+        padding: 25px;
+        text-align: center;
+      }
+
+      .momento-card-desc h3 {
+        font-size: calc(1rem + 0.3vw);
+        color: #8b0000;
+        margin-bottom: 10px;
+        font-family: "Georgia", serif;
+        font-weight: 500;
+      }
+
+      .momento-card-desc p {
+        font-size: 0.95rem;
+        color: #666;
+        margin-bottom: 0;
+        font-style: italic;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 768px) {
+        .momentos-section {
+          padding: 60px 15px;
+        }
+
+        .momentos-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .momentos-section h2 {
+          font-size: 1.3rem;
+          margin-bottom: 40px;
+        }
+
+        .momento-card-desc h3 {
+          font-size: 1.1rem;
+        }
+
+        .momento-card-desc p {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html" class="back-btn">← Volver</a>
+
+    <section class="gal">
+      <h1>📸 Nuestros Momentos Especiales</h1>
+
+      <!-- Foto grande al hacer click -->
+      <div class="gal-big" id="galBig">
+        <img id="galBigImg" src="" alt="Foto ampliada" />
+      </div>
+
+      <!-- Carrusel 3D -->
+      <div class="gal-box" id="galBox">
+        <!-- Las imágenes se cargarán aquí -->
+      </div>
+
+      <p class="info-text">Nuestros momentos más especiales ✨</p>
+    </section>
+
+    <!-- Sección de Lugares Especiales -->
+    <section class="lugares-section">
+      <h2>
+        Ahora hay lugares que me gritan tu nombre, porque recuerdo que ahí
+        fui feliz con vos 💕 (esto no lo puede ver pau)
+      </h2>
+
+      <div class="lugares-grid" id="lugaresGrid">
+        <!-- Las fotos se cargarán aquí -->
+      </div>
+    </section>
+
+    <!-- Sección de Momentos que Marcan Historia -->
+    <section class="momentos-section">
+      <h2>Y momentos que marcan historia ✨</h2>
+
+      <div class="momentos-grid" id="momentosGrid">
+        <!-- Las tarjetas de momentos se cargarán aquí -->
+      </div>
+    </section>
+
+    <script>
+      let totalImages = 0;
+
+      function loadGallery() {
+        // Lista de nombres de imágenes a buscar
+        const imageNames = [
+          "dondeleunbesoenlodepau.jpg",
+          "ellaHermosaenfrabega.jpg",
+          "fotodelafotocompu.jpg",
+          "losdosdenegroenelsarmiento.jpg",
+          "losdosenespejolocalropa.jpg",
+          "mascarilla.jpg",
+          "nosotrosdepuesdelapresentacion.jpg",
+          "nosotrosenlondon.jpg",
+        ];
+
+        const galBox = document.getElementById("galBox");
+        let loadedCount = 0;
+
+        imageNames.forEach((name, index) => {
+          const img = new Image();
+
+          img.onload = () => {
+            loadedCount++;
+            totalImages = loadedCount;
+
+            // Crear elemento span con la imagen
+            const span = document.createElement("span");
+            span.style.setProperty("--i", loadedCount);
+            span.innerHTML = `<img src="images/${name}" alt="Foto ${loadedCount}">`;
+
+            // Agregar evento click
+            span.addEventListener("click", (e) => {
+              e.stopPropagation();
+              const galBig = document.getElementById("galBig");
+              const galBigImg = document.getElementById("galBigImg");
+              galBigImg.src = `images/${name}`;
+              galBig.classList.add("show-galbig");
+            });
+
+            galBox.appendChild(span);
+          };
+
+          img.onerror = () => {
+            // Si no existe la imagen, no la añade
+          };
+
+          img.src = `images/${name}`;
+        });
+
+        // Cerrar galería al hacer click en el fondo
+        const galBig = document.getElementById("galBig");
+        galBig.addEventListener("click", (e) => {
+          if (e.target === galBig) {
+            galBig.classList.remove("show-galbig");
+          }
+        });
+
+        // Cerrar con ESC
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            galBig.classList.remove("show-galbig");
+          }
+        });
+      }
+
+      window.addEventListener("load", loadGallery);
+
+      // Cargar lugares especiales
+      function loadLugares() {
+        const imagenes = [
+          "departamentopaula.jpg",
+          "patashabitacionvico.jpg",
+          "piesitosenelbarcodelsarmiento.jpg",
+        ];
+
+        const lugaresGrid = document.getElementById("lugaresGrid");
+
+        imagenes.forEach((imagen) => {
+          const img = new Image();
+
+          img.onload = () => {
+            const fotoDiv = document.createElement("div");
+            fotoDiv.className = "lugar-foto";
+            fotoDiv.innerHTML = `<img src="images/${imagen}" alt="Foto especial">`;
+            lugaresGrid.appendChild(fotoDiv);
+            fotoDiv.addEventListener("click", (e) => {
+              e.stopPropagation();
+              const galBig = document.getElementById("galBig");
+              const galBigImg = document.getElementById("galBigImg");
+              galBigImg.src = `images/${imagen}`;
+              galBig.classList.add("show-galbig");
+            });
+          };
+
+
+          img.onerror = () => {
+            // Si la imagen no existe, no la añade
+          };
+
+          img.src = `images/${imagen}`;
+        });
+      }
+
+      window.addEventListener("load", () => {
+        loadLugares();
+        loadMomentos();
+      });
+
+      // Cargar momentos que marcan historia
+      function loadMomentos() {
+        const momentos = [
+          {
+            titulo: "Primera foto publica",
+            descripcion: "blanqueando",
+            imagen: "fotoquesubimosenlodepau.jpg",
+          },
+          {
+            titulo: "hoy hace 2 meses",
+            descripcion:
+              "La noche que te pedi que fueras mi novia (Te amo)",
+            imagen: "ellael13demarzo.jpg",
+          },
+          {
+            titulo: "Primera Foto",
+            descripcion:
+              "La primera foto tuya que guardé (esto no lo sabias)",
+            imagen: "laprimerafotoenmigaleria.jpg",
+          },
+          {
+            titulo: "Noche del Primer beso",
+            descripcion: "Yo ganando en la vida",
+            imagen: "nocheprimerbeso1.jpg",
+          },
+        ];
+
+        const momentosGrid = document.getElementById("momentosGrid");
+
+        momentos.forEach((momento) => {
+          const img = new Image();
+
+          img.onload = () => {
+            const card = document.createElement("div");
+            card.className = "momento-card";
+            card.innerHTML = `
+            <img src="images/${momento.imagen}" alt="${momento.titulo}">
+            <div class="momento-card-desc">
+              <h3>${momento.titulo}</h3>
+              <p>${momento.descripcion}</p>
+            </div>
+          `;
+            momentosGrid.appendChild(card);
+          };
+
+          img.onerror = () => {
+            // Si la imagen no existe, no la añade
+          };
+
+          img.src = `images/${momento.imagen}`;
+        });
+      }
+    </script>
+  </body>
+</html>
