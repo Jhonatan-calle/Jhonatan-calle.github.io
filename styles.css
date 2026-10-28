@@ -600,3 +600,38 @@ footer {
   color: var(--text3);
   margin-top: 0.3rem;
 }
+
+/* ── AI workflow ── */
+.ai-flow { margin-top: 2rem; }
+
+.ai-steps {
+  list-style: none;
+  counter-reset: step;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.ai-step {
+  counter-increment: step;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 1.1rem 1.3rem;
+  box-shadow: var(--shadow);
+}
+
+.ai-step::before {
+  content: counter(step, decimal-leading-zero);
+  display: block;
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.ai-step-title { font-size: 0.9rem; font-weight: 500; color: var(--text); margin-bottom: 0.25rem; }
+.ai-step-body { font-size: 0.8rem; color: var(--text2); line-height: 1.65; font-weight: 300; }
+
+@media (max-width: 640px) { .ai-steps { grid-template-columns: 1fr; } }
