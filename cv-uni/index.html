@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV · Jhonatan Calle — Puesto UNI</title>
+    <meta name="description" content="Currículum de Jhonatan Calle para puesto en la universidad." />
+    <link rel="stylesheet" href="cv.css" />
+  </head>
+  <body>
+    <!-- Barra de trabajo: no se imprime -->
+    <div class="toolbar no-print" role="toolbar" aria-label="Herramientas del CV">
+      <span class="toolbar-title">CV · Puesto UNI</span>
+
+      <button id="btnEdit" class="btn" type="button">Editar</button>
+      <button id="btnPdf" class="btn btn-primary" type="button">Descargar PDF</button>
+
+      <span class="toolbar-sep" aria-hidden="true"></span>
+
+      <button id="btnDownload" class="btn btn-ghost" type="button" title="Baja cv-data.js con los cambios de esta página">
+        Descargar datos
+      </button>
+      <button id="btnImport" class="btn btn-ghost" type="button" title="Cargar un cv-data.js desde el disco">
+        Importar
+      </button>
+      <button id="btnReset" class="btn btn-ghost" type="button" title="Volver al cv-data.js del repositorio">
+        Restaurar
+      </button>
+
+      <input id="fileInput" type="file" accept=".js,.json,text/javascript,application/json" hidden />
+
+      <span id="status" class="status" role="status" aria-live="polite"></span>
+    </div>
+
+    <!-- La hoja A4. Todo su contenido lo arma cv.js a partir de cv-data.js -->
+    <main id="cv" class="sheet" aria-label="Currículum vitae"></main>
+
+    <p class="hint no-print">
+      Hoja A4 de una página. «Descargar PDF» abre el diálogo de impresión: elegí
+      <strong>Guardar como PDF</strong> y ya está.
+    </p>
+
+    <script src="cv-data.js"></script>
+    <script src="cv.js"></script>
+  </body>
+</html>
